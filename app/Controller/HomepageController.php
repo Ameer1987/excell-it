@@ -14,6 +14,7 @@ class HomepageController extends AppController {
     /**
      */
     function index() {
+        $this->layout = 'homepage';
         $this->set('sections', 'dsfsdf');
     }
 
