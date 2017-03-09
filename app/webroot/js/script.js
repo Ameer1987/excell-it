@@ -1,5 +1,5 @@
 function include(scriptUrl) {
-    document.write('<script src="' + scriptUrl + '"></script>');
+    document.write('<script src="/excell-it/' + scriptUrl + '"></script>');
 }
 
 function isIE() {
