@@ -1,7 +1,10 @@
 <ul data-type="navbar" class="sf-menu">
-    <li class="active"><a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'homepage')); ?>">Home</a>
+    <li class="<?php echo $this->action == "homepage" ? "active" : ""; ?>">
+        <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'homepage')); ?>">Home</a>
     </li>
-    <li><a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'about')); ?>">About</a>
+
+    <li class="<?php echo $this->action == "about" ? "active" : ""; ?>">
+        <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'about')); ?>">About</a>
         <!--                                    <ul>
                                                 <li><a href="#">Lorem ipsum dolor</a></li>
                                                 <li><a href="#">Conse ctetur adipisicing</a></li>
@@ -16,10 +19,16 @@
                                                 <li><a href="#">Ut enim ad minim</a></li>
                                             </ul>-->
     </li>
-    <li><a href="index-2.html">Services</a>
+
+    <li class="<?php echo $this->action == "services" ? "active" : ""; ?>">
+        <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'services')); ?>">Services</a>
     </li>
-    <li><a href="index-3.html">Career</a>
+
+    <li class="<?php echo $this->action == "career" ? "active" : ""; ?>">
+        <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'career')); ?>">Career</a>
     </li>
-    <li><a href="index-4.html">Contacts</a>
+
+    <li class="<?php echo $this->action == "contact" ? "active" : ""; ?>">
+        <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'contact')); ?>">Contacts</a>
     </li>
 </ul>
