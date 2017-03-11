@@ -25,4 +25,25 @@ class PagesController extends AppController {
         $this->layout = 'pages';
     }
 
+    /**
+     * 
+     */
+    function services() {
+        $this->layout = 'pages';
+    }
+
+    /**
+     * 
+     */
+    function contact() {
+        $this->layout = 'pages';
+    }
+
+    /**
+     * 
+     */
+    function career() {
+        $this->layout = 'pages';
+    }
+
 }
