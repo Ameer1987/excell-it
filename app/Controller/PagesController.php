@@ -21,13 +21,6 @@ class PagesController extends AppController {
     /**
      * 
      */
-    function about() {
-        $this->layout = 'pages';
-    }
-
-    /**
-     * 
-     */
     function services() {
         $this->layout = 'pages';
     }
