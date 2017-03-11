@@ -6,6 +6,7 @@
         </title>
         <meta charset="utf-8">
         <meta name="format-detection" content="telephone=no">
+
         <?php
         echo $this->Html->meta('favicon.ico', '/img/favicon.ico', array(
             'type' => 'icon'
@@ -37,7 +38,7 @@
             <header>
                 <div class="container">
                     <div class="brand">
-                        <h1 class="brand_name"><a href="./">Business</a></h1>
+                        <h1 class="brand_name"><a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'homepage')); ?>">Business</a></h1>
                         <p class="brand_slogan">Company</p>
                     </div><a href="callto:#" class="fa-phone">800-2345-6789</a>
                     <p>One of our representatives will happily contact you within 24 hours. For urgent needs call us at</p>
@@ -53,12 +54,28 @@
 
             <!--
             ========================================================
-                                        CONTENT AND FOOTER
+                                        CONTENT
             ========================================================
             -->
-            <?php echo $this->Flash->render(); ?>
+            <main class="mobile-center">
+                <?php echo $this->Flash->render(); ?>
 
-            <?php echo $this->fetch('content'); ?>
+                <?php echo $this->fetch('content'); ?>
+            </main>
+
+            <!--
+========================================================
+                            FOOTER
+========================================================
+            -->
+            <footer>
+                <?php echo $this->fetch('extra_footer'); ?>
+                <section>
+                    <div class="container">
+                        <?php echo $this->element('footer_copyright'); ?>
+                    </div>
+                </section>
+            </footer>
 
         </div>
         <?php echo $this->Html->script('script'); ?>
