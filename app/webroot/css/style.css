@@ -289,7 +289,7 @@ p + .btn_wr {
 }
 
 .bg-image {
-  background: url(../images/page-3_bg.jpg) center no-repeat;
+  background: url(/excell-it/img/page-3_bg.jpg) center no-repeat;
   background-size: cover;
 }
 .bg-image p {
