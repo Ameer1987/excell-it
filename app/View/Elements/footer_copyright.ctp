@@ -1,2 +1,6 @@
-<div class="copyright">Business Company © <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="index-5.html">Privacy Policy</a>More Business Website Templates at <a rel="nofollow" href="http://www.templatemonster.com/category/business-web-templates/" target="_blank">TemplateMonster.com</a>
+<div class="copyright">
+    <a rel="nofollow" href="http://rapid-develop.com" target="_blank">
+        Rapid Develop © <span id="copyright-year"></span>
+    </a>
+    <a href="index-5.html">Privacy Policy</a>
 </div>
