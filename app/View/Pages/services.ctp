@@ -75,8 +75,7 @@
 <footer>
     <section>
         <div class="container">
-            <div class="copyright">Business Company © <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="index-5.html">Privacy Policy</a>
-            </div>
+            <?php echo $this->element('footer_copyright'); ?>
         </div>
     </section>
 </footer>
