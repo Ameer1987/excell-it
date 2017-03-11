@@ -1,8 +1,7 @@
-
 <ul data-type="navbar" class="sf-menu">
-    <li class="active"><a href="./">Home</a>
+    <li class="active"><a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'homepage')); ?>">Home</a>
     </li>
-    <li><a href="index-1.html">About</a>
+    <li><a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'about')); ?>">About</a>
         <!--                                    <ul>
                                                 <li><a href="#">Lorem ipsum dolor</a></li>
                                                 <li><a href="#">Conse ctetur adipisicing</a></li>
