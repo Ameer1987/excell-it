@@ -12,6 +12,6 @@
     </li>
 
     <li class="<?php echo $this->action == "contact" ? "active" : ""; ?>">
-        <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'contact')); ?>">Contacts</a>
+        <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'contact')); ?>">Contact us</a>
     </li>
 </ul>
