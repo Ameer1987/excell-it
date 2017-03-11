@@ -6,6 +6,7 @@
 class PagesController extends AppController {
 
     var $name = 'Pages';
+    public $helpers = array('GoogleMap');
 
     function beforeFilter() {
         
