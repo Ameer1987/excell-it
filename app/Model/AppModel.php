@@ -30,4 +30,21 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+    public $actsAs = array('Admin.ToString');
+    /**
+     * validation rule to compare two fields
+     * used for password validation in create/update forms
+     * @param $check
+     * @param $otherfield
+     * @return bool
+     */
+    public function equaltofield($check, $otherfield) {
+        //get name of field
+        $fname = '';
+        foreach ($check as $key => $value){
+            $fname = $key;
+            break;
+        }
+        return $this->data[$this->name][$otherfield] === $this->data[$this->name][$fname];
+    }
 }
