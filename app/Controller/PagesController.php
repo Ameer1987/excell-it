@@ -39,6 +39,10 @@ class PagesController extends AppController {
      */
     function contact() {
         $this->layout = 'pages';
+        
+        $this->loadModel('Contact');
+        $contacts = $this->Contact->find('all');
+        $this->set('contacts', $contacts);
     }
 
     /**
