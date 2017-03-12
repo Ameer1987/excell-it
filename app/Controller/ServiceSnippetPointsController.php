@@ -57,6 +57,9 @@ class ServiceSnippetPointsController extends AppController {
 				$this->Flash->error(__('The service snippet point could not be saved. Please, try again.'));
 			}
 		}
+                $serviceSnippetsModel = ClassRegistry::init('ServiceSnippet');
+		$serviceSnippets = $serviceSnippetsModel->find('list');
+		$this->set(compact('serviceSnippets'));
 	}
 
 /**
@@ -81,6 +84,9 @@ class ServiceSnippetPointsController extends AppController {
 			$options = array('conditions' => array('ServiceSnippetPoint.' . $this->ServiceSnippetPoint->primaryKey => $id));
 			$this->request->data = $this->ServiceSnippetPoint->find('first', $options);
 		}
+		$serviceSnippetsModel = ClassRegistry::init('ServiceSnippet');
+		$serviceSnippets = $serviceSnippetsModel->find('list');
+		$this->set(compact('serviceSnippets'));
 	}
 
 /**
@@ -144,6 +150,9 @@ class ServiceSnippetPointsController extends AppController {
 				$this->Flash->error(__('The service snippet point could not be saved. Please, try again.'));
 			}
 		}
+		$serviceSnippetsModel = ClassRegistry::init('ServiceSnippet');
+		$serviceSnippets = $serviceSnippetsModel->find('list');
+		$this->set(compact('serviceSnippets'));
 	}
 
 /**
@@ -168,6 +177,9 @@ class ServiceSnippetPointsController extends AppController {
 			$options = array('conditions' => array('ServiceSnippetPoint.' . $this->ServiceSnippetPoint->primaryKey => $id));
 			$this->request->data = $this->ServiceSnippetPoint->find('first', $options);
 		}
+		$serviceSnippetsModel = ClassRegistry::init('ServiceSnippet');
+		$serviceSnippets = $serviceSnippetsModel->find('list');
+		$this->set(compact('serviceSnippets'));
 	}
 
 /**
