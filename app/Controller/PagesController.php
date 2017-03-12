@@ -38,6 +38,18 @@ class PagesController extends AppController {
      */
     function career() {
         $this->layout = 'pages';
+
+        $this->loadModel('Career');
+        $careers = $this->Career->find('all');
+        $this->set('careers', $careers);
+    }
+
+    function displayObject($object_id, $model) {
+        $this->layout = 'pages';
+
+        $this->loadModel($model);
+        $object = $this->$model->findById($object_id);
+        $this->set('object', $object);
     }
 
 }
