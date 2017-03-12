@@ -8,35 +8,22 @@
 <section class="well1 ins2 mobile-center">
     <div class="container">
         <h2>The best business services</h2>
-        <div class="row off2">
-            <div class="grid_4"><img src="../img/page-3_img01.jpg" alt="">
-                <h3>Fusce euismod consequat ante</h3>
-                <p>Curabitur facilisis pellentesque pharetra. Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh.</p><a href="#" class="btn">Read more</a>
-            </div>
-            <div class="grid_4"><img src="../img/page-3_img02.jpg" alt="">
-                <h3>Ut pharetra augue nec viverra</h3>
-                <p>Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum.</p><a href="#" class="btn">Read more</a>
-            </div>
-            <div class="grid_4"><img src="../img/page-3_img03.jpg" alt="">
-                <h3>Donec porta diam eu massa</h3>
-                <p>Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum erat tortor venenatis risus, sit amet cursus dui augue a arcu.</p><a href="#" class="btn">Read more</a>
-            </div>
+        <div class="row">
+            <?php foreach ($services as $key => $service): ?>
+                <?php if ($key > 0 && $key % 3 == 0): ?>
+                </div><hr><div class="row">
+                <?php endif ?>
+                <div class="grid_4">
+                    <?php if ($service['Service']['image_name']): ?>
+                        <img src="../img/<?php echo $service['Service']['image_name'] ?>" alt="">
+                    <?php endif ?>
+                    <h3><?php echo $service['Service']['header'] ?></h3>
+                    <p><?php echo $service['Service']['details'] ?></p>
+                    <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'displayService', $service['Service']['id'])); ?>" class="btn">Read more</a>
+                </div>
+            <?php endforeach ?>
         </div>
         <hr>
-        <div class="row">
-            <div class="grid_4"><img src="../img/page-3_img04.jpg" alt="">
-                <h3>Proin dictum elementum velit</h3>
-                <p>Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum, justo eget ultrices vestibulum erat tortor venenatis risus, sit amet cursus dui augue a arcu. Quisque mauris risus, gravida a molestie eu.</p><a href="#" class="btn">Read more</a>
-            </div>
-            <div class="grid_4"><img src="../img/page-3_img05.jpg" alt="">
-                <h3>Vestibulum iaculis lacinia est</h3>
-                <p>Quisque mauris risus, gravida a molestie eu, dictum ac augue. Integer sodales tempor lectus; sit amet dictum metus pharetra nec. Fusce bibendum dapibus pretium. Nunc eu sem vitae lacus laoreet elementum. Nulla facilisi.</p><a href="#" class="btn">Read more</a>
-            </div>
-            <div class="grid_4"><img src="../img/page-3_img06.jpg" alt="">
-                <h3>Consectetuer adipiscing elit</h3>
-                <p>Integer sodales tempor lectus; sit amet dictum metus pharetra nec. Fusce bibendum dapibus pretium. Nunc eu sem vitae lacus laoreet elementum. Nulla facilisi. Phasellus ullamcorper elementum est, id pretium turpis.</p><a href="#" class="btn">Read more</a>
-            </div>
-        </div>
     </div>
 </section>
 <section class="well1 ins4 bg-image">
