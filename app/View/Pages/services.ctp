@@ -30,26 +30,25 @@
     <div class="container">
         <div class="row">
             <div class="grid_7 preffix_5">
-                <h2>How we can help?</h2>
-                <p>Curabitur pellentesque, turpis sit amet iaculis condimentum, urna mi aliquet turpis, itae pharetra mauris eros non arcu. Aenean felis augue, dignissim in tempus eget, cursus sit amet sem? Cras vehicula vehicula nunc id fringilla?</p>
-                <div class="row off4">
-                    <div class="grid_3">
-                        <ul class="marked-list wow fadeInRight">
-                            <li><a href="#">Praesent vestibulum molestie</a></li>
-                            <li><a href="#">Aenean nonummy hendrerit</a></li>
-                            <li><a href="#">Vivamus eget nibh</a></li>
-                            <li><a href="#">Etiam cursus leo vel metus</a></li>
-                        </ul>
+                <?php if (count($service_snippets) > 0): ?>
+                    <h2><?php echo $service_snippets[0]['ServiceSnippet']['header'] ?></h2>
+                    <p><?php echo $service_snippets[0]['ServiceSnippet']['intro'] ?></p>
+                    <div class="row off4">
+                        <div class="grid_3">
+                            <ul class="marked-list wow fadeInRight">
+                                <?php foreach ($service_snippets[0]['ServiceSnippetPoint'] as $key => $serviceSnippetPoint): ?>
+                                    <?php if ($key > 0 and $key % 3 === 0): ?>  
+                                    </ul>
+                                </div>
+                                <div class="grid_3">
+                                    <ul data-wow-delay="0.2s" class="marked-list wow fadeInRight">
+                                    <?php endif; ?>    
+                                    <li><?php echo $serviceSnippetPoint['point_detail'] ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="grid_3">
-                        <ul data-wow-delay="0.2s" class="marked-list wow fadeInRight">
-                            <li><a href="#">Donec in velit vel ipsum auctor</a></li>
-                            <li><a href="#">Vestibulum iaculis lacinia est</a></li>
-                            <li><a href="#">Proin dictum elementum velit</a></li>
-                            <li><a href="#">Fusce euismod consequat ante</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

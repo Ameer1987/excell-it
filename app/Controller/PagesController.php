@@ -30,8 +30,8 @@ class PagesController extends AppController {
         $this->set('services', $services);
 
         $this->loadModel('ServiceSnippet');
-        $services_snippets = $this->ServiceSnippet->find('all');
-        $this->set('services_snippet', $services_snippets);
+        $service_snippets = $this->ServiceSnippet->find('all');
+        $this->set('service_snippets', $service_snippets);
     }
 
     /**
@@ -39,7 +39,7 @@ class PagesController extends AppController {
      */
     function contact() {
         $this->layout = 'pages';
-        
+
         $this->loadModel('Contact');
         $contacts = $this->Contact->find('all');
         $this->set('contacts', $contacts);
