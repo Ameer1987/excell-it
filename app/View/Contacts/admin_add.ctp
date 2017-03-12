@@ -4,9 +4,10 @@
 		<legend><?php echo __('Admin Add Contact'); ?></legend>
 	<?php
 		echo $this->Form->input('name');
-		echo $this->Form->input('text');
+		echo $this->Form->input('details');
 		echo $this->Form->input('image_name');
-		echo $this->Form->input('position_map');
+		echo $this->Form->input('position_latitude');
+		echo $this->Form->input('position_longitude');
 		echo $this->Form->input('phone');
 		echo $this->Form->input('address');
 		echo $this->Form->input('logo_name');

@@ -5,9 +5,10 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('text'); ?></th>
+			<th><?php echo $this->Paginator->sort('details'); ?></th>
 			<th><?php echo $this->Paginator->sort('image_name'); ?></th>
-			<th><?php echo $this->Paginator->sort('position_map'); ?></th>
+			<th><?php echo $this->Paginator->sort('position_latitude'); ?></th>
+			<th><?php echo $this->Paginator->sort('position_longitude'); ?></th>
 			<th><?php echo $this->Paginator->sort('phone'); ?></th>
 			<th><?php echo $this->Paginator->sort('address'); ?></th>
 			<th><?php echo $this->Paginator->sort('logo_name'); ?></th>
@@ -23,9 +24,10 @@
 	<tr>
 		<td><?php echo h($contact['Contact']['id']); ?>&nbsp;</td>
 		<td><?php echo h($contact['Contact']['name']); ?>&nbsp;</td>
-		<td><?php echo h($contact['Contact']['text']); ?>&nbsp;</td>
+		<td><?php echo h($contact['Contact']['details']); ?>&nbsp;</td>
 		<td><?php echo h($contact['Contact']['image_name']); ?>&nbsp;</td>
-		<td><?php echo h($contact['Contact']['position_map']); ?>&nbsp;</td>
+		<td><?php echo h($contact['Contact']['position_latitude']); ?>&nbsp;</td>
+		<td><?php echo h($contact['Contact']['position_longitude']); ?>&nbsp;</td>
 		<td><?php echo h($contact['Contact']['phone']); ?>&nbsp;</td>
 		<td><?php echo h($contact['Contact']['address']); ?>&nbsp;</td>
 		<td><?php echo h($contact['Contact']['logo_name']); ?>&nbsp;</td>

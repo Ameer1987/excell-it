@@ -6,7 +6,6 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('header'); ?></th>
 			<th><?php echo $this->Paginator->sort('intro'); ?></th>
-			<th><?php echo $this->Paginator->sort('service_snippet_points_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('image_name'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -17,9 +16,6 @@
 		<td><?php echo h($serviceSnippet['ServiceSnippet']['id']); ?>&nbsp;</td>
 		<td><?php echo h($serviceSnippet['ServiceSnippet']['header']); ?>&nbsp;</td>
 		<td><?php echo h($serviceSnippet['ServiceSnippet']['intro']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($serviceSnippet['ServiceSnippetPoints']['id'], array('controller' => 'service_snippet_points', 'action' => 'view', $serviceSnippet['ServiceSnippetPoints']['id'])); ?>
-		</td>
 		<td><?php echo h($serviceSnippet['ServiceSnippet']['image_name']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $serviceSnippet['ServiceSnippet']['id'])); ?>
@@ -48,7 +44,5 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Service Snippet'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Service Snippet Points'), array('controller' => 'service_snippet_points', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Service Snippet Points'), array('controller' => 'service_snippet_points', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

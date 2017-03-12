@@ -12,7 +12,8 @@ class ServiceSnippetPointTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.service_snippet_point'
+		'app.service_snippet_point',
+		'app.service_snippets'
 	);
 
 /**

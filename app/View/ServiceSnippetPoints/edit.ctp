@@ -5,6 +5,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('point_detail');
+		echo $this->Form->input('service_snippets_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -15,5 +16,7 @@
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('ServiceSnippetPoint.id')), array('confirm' => __('Are you sure you want to delete # %s?', $this->Form->value('ServiceSnippetPoint.id')))); ?></li>
 		<li><?php echo $this->Html->link(__('List Service Snippet Points'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Service Snippets'), array('controller' => 'service_snippets', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Service Snippets'), array('controller' => 'service_snippets', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

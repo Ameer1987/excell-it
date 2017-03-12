@@ -11,9 +11,9 @@
 			<?php echo h($contact['Contact']['name']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Text'); ?></dt>
+		<dt><?php echo __('Details'); ?></dt>
 		<dd>
-			<?php echo h($contact['Contact']['text']); ?>
+			<?php echo h($contact['Contact']['details']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Image Name'); ?></dt>
@@ -21,9 +21,14 @@
 			<?php echo h($contact['Contact']['image_name']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Position Map'); ?></dt>
+		<dt><?php echo __('Position Latitude'); ?></dt>
 		<dd>
-			<?php echo h($contact['Contact']['position_map']); ?>
+			<?php echo h($contact['Contact']['position_latitude']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Position Longitude'); ?></dt>
+		<dd>
+			<?php echo h($contact['Contact']['position_longitude']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Phone'); ?></dt>
