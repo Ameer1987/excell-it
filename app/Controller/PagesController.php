@@ -44,12 +44,12 @@ class PagesController extends AppController {
         $this->set('careers', $careers);
     }
 
-    function displayObject($object_id, $model) {
+    function displayCareer($career_id) {
         $this->layout = 'pages';
 
-        $this->loadModel($model);
-        $object = $this->$model->findById($object_id);
-        $this->set('object', $object);
+        $this->loadModel('Career');
+        $career = $this->Career->findById($career_id);
+        $this->set('career', $career);
     }
 
 }
