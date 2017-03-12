@@ -5,7 +5,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('point_detail');
-		echo $this->Form->input('service_snippets_id');
+		echo $this->Form->input('service_snippet_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

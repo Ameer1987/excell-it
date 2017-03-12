@@ -11,9 +11,9 @@
 			<?php echo h($serviceSnippetPoint['ServiceSnippetPoint']['point_detail']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Service Snippets'); ?></dt>
+		<dt><?php echo __('Service Snippet Id'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($serviceSnippetPoint['ServiceSnippets']['id'], array('controller' => 'service_snippets', 'action' => 'view', $serviceSnippetPoint['ServiceSnippets']['id'])); ?>
+			<?php echo h($serviceSnippetPoint['ServiceSnippetPoint']['service_snippet_id']); ?>
 			&nbsp;
 		</dd>
 	</dl>
