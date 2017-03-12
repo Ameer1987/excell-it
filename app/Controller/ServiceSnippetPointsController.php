@@ -5,8 +5,6 @@ App::uses('AppController', 'Controller');
  *
  * @property ServiceSnippetPoint $ServiceSnippetPoint
  * @property PaginatorComponent $Paginator
- * @property SessionComponent $Session
- * @property FlashComponent $Flash
  */
 class ServiceSnippetPointsController extends AppController {
 
@@ -15,7 +13,7 @@ class ServiceSnippetPointsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Session', 'Flash');
+	public $components = array('Paginator');
 
 /**
  * index method
@@ -57,8 +55,7 @@ class ServiceSnippetPointsController extends AppController {
 				$this->Flash->error(__('The service snippet point could not be saved. Please, try again.'));
 			}
 		}
-                $serviceSnippetsModel = ClassRegistry::init('ServiceSnippet');
-		$serviceSnippets = $serviceSnippetsModel->find('list');
+		$serviceSnippets = $this->ServiceSnippetPoint->ServiceSnippet->find('list');
 		$this->set(compact('serviceSnippets'));
 	}
 
@@ -84,8 +81,7 @@ class ServiceSnippetPointsController extends AppController {
 			$options = array('conditions' => array('ServiceSnippetPoint.' . $this->ServiceSnippetPoint->primaryKey => $id));
 			$this->request->data = $this->ServiceSnippetPoint->find('first', $options);
 		}
-		$serviceSnippetsModel = ClassRegistry::init('ServiceSnippet');
-		$serviceSnippets = $serviceSnippetsModel->find('list');
+		$serviceSnippets = $this->ServiceSnippetPoint->ServiceSnippet->find('list');
 		$this->set(compact('serviceSnippets'));
 	}
 
@@ -150,8 +146,7 @@ class ServiceSnippetPointsController extends AppController {
 				$this->Flash->error(__('The service snippet point could not be saved. Please, try again.'));
 			}
 		}
-		$serviceSnippetsModel = ClassRegistry::init('ServiceSnippet');
-		$serviceSnippets = $serviceSnippetsModel->find('list');
+		$serviceSnippets = $this->ServiceSnippetPoint->ServiceSnippet->find('list');
 		$this->set(compact('serviceSnippets'));
 	}
 
@@ -177,8 +172,7 @@ class ServiceSnippetPointsController extends AppController {
 			$options = array('conditions' => array('ServiceSnippetPoint.' . $this->ServiceSnippetPoint->primaryKey => $id));
 			$this->request->data = $this->ServiceSnippetPoint->find('first', $options);
 		}
-		$serviceSnippetsModel = ClassRegistry::init('ServiceSnippet');
-		$serviceSnippets = $serviceSnippetsModel->find('list');
+		$serviceSnippets = $this->ServiceSnippetPoint->ServiceSnippet->find('list');
 		$this->set(compact('serviceSnippets'));
 	}
 
