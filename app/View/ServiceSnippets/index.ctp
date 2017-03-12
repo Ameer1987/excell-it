@@ -44,5 +44,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Service Snippet'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Service Snippet Points'), array('controller' => 'service_snippet_points', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Service Snippet Point'), array('controller' => 'service_snippet_points', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
