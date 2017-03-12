@@ -9,18 +9,13 @@
     <div class="container">
         <h2>Job opportunities</h2>
         <div class="row">
-            <div class="grid_4">
-                <h3>Fusce euismod consequat ante</h3>
-                <p>Curabitur facilisis pellentesque pharetra. Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh.</p><a href="#" class="btn">Read more</a>
-            </div>
-            <div class="grid_4">
-                <h3>Fusce euismod consequat ante</h3>
-                <p>Curabitur facilisis pellentesque pharetra. Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh.</p><a href="#" class="btn">Read more</a>
-            </div>
-            <div class="grid_4">
-                <h3>Fusce euismod consequat ante</h3>
-                <p>Curabitur facilisis pellentesque pharetra. Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh.</p><a href="#" class="btn">Read more</a>
-            </div>
+            <?php foreach ($careers as $career): ?>
+                <div class="grid_4">
+                    <h3><?php echo $career['Career']['header'] ?></h3>
+                    <p><?php echo $career['Career']['details'] ?></p>
+                    <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'displayObject', $career['Career']['id'], 'Career')); ?>" class="btn">Read more</a>
+                </div>
+            <?php endforeach ?>
         </div>
     </div>
 </section>
