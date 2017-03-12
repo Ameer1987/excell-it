@@ -3,7 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * ServiceSnippetPoint Model
  *
- * @property ServiceSnippets $ServiceSnippets
+ * @property ServiceSnippet $ServiceSnippet
  */
 class ServiceSnippetPoint extends AppModel {
 
@@ -16,9 +16,9 @@ class ServiceSnippetPoint extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'ServiceSnippets' => array(
-			'className' => 'ServiceSnippets',
-			'foreignKey' => 'service_snippets_id',
+		'ServiceSnippet' => array(
+			'className' => 'ServiceSnippet',
+			'foreignKey' => 'service_snippet_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
