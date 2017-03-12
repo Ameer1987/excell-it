@@ -5,8 +5,6 @@ App::uses('AppController', 'Controller');
  *
  * @property ServiceSnippet $ServiceSnippet
  * @property PaginatorComponent $Paginator
- * @property SessionComponent $Session
- * @property FlashComponent $Flash
  */
 class ServiceSnippetsController extends AppController {
 
@@ -15,7 +13,7 @@ class ServiceSnippetsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Session', 'Flash');
+	public $components = array('Paginator');
 
 /**
  * index method
@@ -57,8 +55,6 @@ class ServiceSnippetsController extends AppController {
 				$this->Flash->error(__('The service snippet could not be saved. Please, try again.'));
 			}
 		}
-		$serviceSnippetPoints = $this->ServiceSnippet->ServiceSnippetPoint->find('list');
-		$this->set(compact('serviceSnippetPoints'));
 	}
 
 /**
@@ -83,8 +79,6 @@ class ServiceSnippetsController extends AppController {
 			$options = array('conditions' => array('ServiceSnippet.' . $this->ServiceSnippet->primaryKey => $id));
 			$this->request->data = $this->ServiceSnippet->find('first', $options);
 		}
-		$serviceSnippetPoints = $this->ServiceSnippet->ServiceSnippetPoint->find('list');
-		$this->set(compact('serviceSnippetPoints'));
 	}
 
 /**
@@ -148,8 +142,6 @@ class ServiceSnippetsController extends AppController {
 				$this->Flash->error(__('The service snippet could not be saved. Please, try again.'));
 			}
 		}
-		$serviceSnippetPoints = $this->ServiceSnippet->ServiceSnippetPoint->find('list');
-		$this->set(compact('serviceSnippetPoints'));
 	}
 
 /**
@@ -174,8 +166,6 @@ class ServiceSnippetsController extends AppController {
 			$options = array('conditions' => array('ServiceSnippet.' . $this->ServiceSnippet->primaryKey => $id));
 			$this->request->data = $this->ServiceSnippet->find('first', $options);
 		}
-		$serviceSnippetPoints = $this->ServiceSnippet->ServiceSnippetPoint->find('list');
-		$this->set(compact('serviceSnippetPoints'));
 	}
 
 /**
