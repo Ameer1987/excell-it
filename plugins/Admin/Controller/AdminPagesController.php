@@ -8,7 +8,7 @@ App::uses('AdminAppController', 'Admin.Controller');
 class AdminPagesController extends AdminAppController {
 
 	public $uses = array('Page');
-        
+
     public function index() {
 	    $conditions = array();
         $pagesTableURL = array('controller' => 'admin_pages', 'action' => 'index');
