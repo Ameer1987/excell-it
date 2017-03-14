@@ -25,10 +25,19 @@
 	<div class="container">
 		<div class="navbar">
 			<div class="navbar-inner">
-				<a class="brand" href="#"><?php echo $backendPluginName; ?></a>
-				<ul class="nav">
-					<li><?php echo $this->Html->link('Overview', '/' . $backendPluginNameUnderscored);?></li>
+                                <br />
+                                
+				<a class="brand" href=""><?php echo $this->Html->link('Excell-It  Admin', '/' . $backendPluginNameUnderscored); ?></a>
+				<br />
+                                <ul class="nav">
 					<li><?php echo $this->Html->link('Users', '/' . $backendPluginNameUnderscored . '/users');?></li>
+					<li><?php echo $this->Html->link('Careers', '/' . $backendPluginNameUnderscored . '/careers');?></li>
+					<li><?php echo $this->Html->link('Contacts', '/' . $backendPluginNameUnderscored . '/contacts');?></li>
+					<li><?php echo $this->Html->link('Services', '/' . $backendPluginNameUnderscored . '/services');?></li>
+					<li><?php echo $this->Html->link('Service Snippets', '/' . $backendPluginNameUnderscored . '/service_snippets');?></li>
+					<li><?php echo $this->Html->link('Messages', '/' . $backendPluginNameUnderscored . '/messages');?></li>
+					<li><?php echo $this->Html->link('Upper Snippets', '/' . $backendPluginNameUnderscored . '/home_upper_snippets');?></li>
+					<li><?php echo $this->Html->link('Middle Snippets', '/' . $backendPluginNameUnderscored . '/home_middle_snippets');?></li>
 				</ul>
 				<ul class="nav pull-right">
 					<li><?php echo $this->Html->link('Logout', '/' . $backendPluginNameUnderscored . '/users/logout');?></li>
