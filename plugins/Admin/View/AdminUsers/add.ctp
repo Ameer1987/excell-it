@@ -1,18 +1,12 @@
 <div class="users form">
-<?php echo $this->ExtendedForm->create('User', array('class' => 'form-horizontal', 'novalidate' => 'novalidate'));?>
-    <fieldset>
-        <legend><?php echo __d('admin', 'Add User'); ?></legend>
+<?php echo $this->ExtendedForm->create('User', array('class' => 'form-horizontal'));?>
+	<fieldset>
+		<legend><?php echo __('Add User'); ?></legend>
 	<?php
-		if(isset($this->request->params['named']['email'])) echo '<div style="display: none;">';
-		echo $this->ExtendedForm->input('email', array_merge(array('label' => __d('admin', 'Email'))));
-		if(isset($this->request->params['named']['email'])) echo '</div>';
-
-		if(isset($this->request->params['named']['password'])) echo '<div style="display: none;">';
-		echo $this->ExtendedForm->input('password', array_merge(array('type' => 'password', 'label' => __d('admin', 'Password'))));
-		echo $this->ExtendedForm->input('confirm_password', array_merge(array('type' => 'password', 'label' => __d('admin', 'Confirm Password'))));
-		if(isset($this->request->params['named']['password'])) echo '</div>';
-
+		echo $this->ExtendedForm->input('email', array('label' => __('Email')));
+		echo $this->ExtendedForm->input('password', array('type' => 'password', 'label' => __('Password')));
+		echo $this->ExtendedForm->input('confirm_password', array('type' => 'password', 'label' => __('Confirm Password')));
 	?>
-    </fieldset>
-<?php echo $this->ExtendedForm->end(array('label' => __d('admin', 'Save User'), 'class' => 'btn btn-primary', 'div' => false, 'before' => '<div class="control-group"><div class="controls">', 'after' => "\n" . $this->Html->link(__d('admin', 'Cancel'), $redirectUrl, array('class' => 'btn')) . '</div></div>'));?>
+	</fieldset>
+<?php echo $this->ExtendedForm->end(array('label' => __('Save User'), 'class' => 'btn btn-primary', 'div' => false, 'before' => '<div class="control-group"><div class="controls">', 'after' => "\n" . $this->Html->link(__('Cancel'), $redirectUrl, array('class' => 'btn')) . '</div></div>'));?>
 </div>

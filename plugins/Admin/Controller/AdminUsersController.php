@@ -23,9 +23,6 @@ class AdminUsersController extends AdminAppController {
         $this->redirect($this->Auth->logout());
     }
     
-    protected function _isAuthorized($user) {
-        return ($this->action == 'login' || $this->action == 'logout');
-    }
     public function index() {
 	    $conditions = array();
         $usersTableURL = array('controller' => 'admin_users', 'action' => 'index');
@@ -63,10 +60,8 @@ class AdminUsersController extends AdminAppController {
         }
 
 		$this->User->recursive = 0;
-		$this->paginate = array('conditions' => $conditions, 'limit' => 15);
-        $this->set('users', $this->Paginator->paginate('User'));
+		$this->set('users', $this->Paginator->paginate('User', $conditions, array()));
 		$this->set('usersTableURL', $usersTableURL);
-        $this->set('usersTableModelAlias', 'User');
 		//render as local table if it is an ajax request
         if($this->request->is('ajax'))
         {
@@ -74,25 +69,21 @@ class AdminUsersController extends AdminAppController {
         }
 	}
     
-    public function view($id = null) {
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
-        }
+	public function view($id = null) {
+		$this->User->id = $id;
+		if (!$this->User->exists()) {
+			throw new NotFoundException(__('Invalid user'));
+		}
         $user = $this->User->read(null, $id);
-        $this->set('user', $user);
-    }
-    
+		$this->set('user', $user);
+	}
+	
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been saved'), 'default', array(), 'good');
-                if(!empty($this->request->query['redirect'])) {
-					$this->redirect($this->redirectUrl);
-				} else {
-					$this->redirect(array('action' => 'view', $this->User->id));
-				}
+                $this->redirect(array('action' => 'view', $this->User->id));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'), 'default', array(), 'bad');
 			}
@@ -103,19 +94,11 @@ class AdminUsersController extends AdminAppController {
                 if(!empty($columnType)) {
                     if(empty($this->request->data['User'])) $this->request->data['User'] = array();
                     $this->request->data['User'][$param] = $value;
-                    //is this a reference to a related object?
-                    foreach ($this->User->belongsTo as $relationName => $relationInfo) {
-                    	if($relationInfo['foreignKey'] == $param) {
-                    		$relatedRecord = $this->User->$relationInfo['className']->find('first', array('conditions' => array($relationInfo['className'] . '.id' => $value), 'recursive' => 0));
-                    		$this->set(Inflector::variable($relationInfo['className']), $relatedRecord);
-                    	}
-                    }
                 }
             }
         }
 	}
-
-
+	
 	public function edit($id = null) {
 		$this->User->id = $id;
 		if (!$this->User->exists()) {
@@ -124,18 +107,16 @@ class AdminUsersController extends AdminAppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been saved'), 'default', array(), 'good');
-				$this->redirect($this->redirectUrl);
+                $this->redirect(array('action' => 'view', $this->User->id));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'), 'default', array(), 'bad');
 			}
 		} else {
-			$user = $this->User->read(null, $id);
+            $user = $this->User->read(null, $id);
 			$this->request->data = $user;
-			$this->set('user', $user);
 		}
 	}
-
-
+	
 	public function delete($id = null) {
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
@@ -146,7 +127,7 @@ class AdminUsersController extends AdminAppController {
 		}
 		if ($this->User->delete()) {
 			$this->Session->setFlash(__('User deleted'), 'default', array(), 'good');
-            $this->redirect($this->redirectUrl);
+            $this->redirect(array('action' => 'index'));
 		}
 		$this->Session->setFlash(__('User was not deleted'), 'default', array(), 'bad');
 		$this->redirect(array('action' => 'index'));
