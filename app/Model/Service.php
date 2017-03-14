@@ -5,5 +5,12 @@ App::uses('AppModel', 'Model');
  *
  */
 class Service extends AppModel {
-
+    public $actsAs = array(
+        'Upload.Upload' => array(
+            'image_name' => array(
+                'rootDir' => ROOT,
+            ),
+            
+        )
+    );
 }

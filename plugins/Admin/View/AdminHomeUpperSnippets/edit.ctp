@@ -20,7 +20,7 @@
 		if(isset($this->request->params['named']['order'])) echo '</div>';
 
 		if(isset($this->request->params['named']['image_name'])) echo '<div style="display: none;">';
-		echo $this->ExtendedForm->input('image_name', array_merge(array('label' => __d('admin', 'Image Name'))));
+		echo $this->ExtendedForm->input('image_name', array_merge(array('label' => __d('admin', 'Image')), array('type' => 'file')));
 		if(isset($this->request->params['named']['image_name'])) echo '</div>';
 
 	?>

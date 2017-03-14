@@ -7,7 +7,7 @@ $this->Paginator->options(array(
 <table class="table table-striped">
 <tr>
 	<th><?php echo $this->Paginator->sort('header', __d('admin', 'header'), array('model' => $servicesTableModelAlias));?></th>
-	<th><?php echo $this->Paginator->sort('image_name', __d('admin', 'image_name'), array('model' => $servicesTableModelAlias));?></th>
+	<th><?php echo $this->Paginator->sort('image_name', __d('admin', 'Images'), array('model' => $servicesTableModelAlias));?></th>
     <th class="actions"><?php echo __d('admin', 'Actions');?></th>
 </tr>
 <?php
