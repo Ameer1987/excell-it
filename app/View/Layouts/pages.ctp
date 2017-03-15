@@ -38,8 +38,7 @@
             <header>
                 <div class="container">
                     <div class="brand">
-                        <h1 class="brand_name"><a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'homepage')); ?>">Business</a></h1>
-                        <p class="brand_slogan">Company</p>
+                        <h1 class="brand_name"><a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'homepage')); ?>"><img src="../img/logo.jpg" style="width: 180px;" /></a></h1>
                     </div><a href="callto:#" class="fa-phone">800-2345-6789</a>
                     <p>One of our representatives will happily contact you within 24 hours. For urgent needs call us at</p>
                 </div>
