@@ -17,6 +17,18 @@ class PagesController extends AppController {
      */
     function homepage() {
         $this->layout = 'pages';
+
+        $this->loadModel('HomeUpperSnippet');
+        $HomeUpperSnippets = $this->HomeUpperSnippet->find('all');
+        $this->set('HomeUpperSnippets', $HomeUpperSnippets);
+
+        $this->loadModel('HomeMiddleSnippet');
+        $HomeMiddleSnippets = $this->HomeMiddleSnippet->find('all');
+        $this->set('HomeMiddleSnippets', $HomeMiddleSnippets);
+
+        $this->loadModel('Contact');
+        $contacts = $this->Contact->find('first');
+        $this->set('contacts', $contacts);
     }
 
     /**
@@ -41,7 +53,7 @@ class PagesController extends AppController {
         $this->layout = 'pages';
 
         $this->loadModel('Contact');
-        $contacts = $this->Contact->find('all');
+        $contacts = $this->Contact->find('first');
         $this->set('contacts', $contacts);
     }
 
