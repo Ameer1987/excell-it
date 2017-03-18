@@ -10,10 +10,41 @@
     <?php echo $this->element('homepage_slideshow'); ?>
 </section>
 <section>
-    <?php echo $this->element('homepage_banner1'); ?>
+    <div class="container banner_wr">
+        <ul class="banner">
+            <?php foreach ($HomeUpperSnippets as $HomeUpperSnippet): ?>
+                <li>
+                    <div class="fa-globe"></div>
+                    <h3><?php echo $HomeUpperSnippet['HomeUpperSnippet']['header']; ?></h3>
+                    <p><?php echo $HomeUpperSnippet['HomeUpperSnippet']['details']; ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
 </section>
 <section class="well ins1">
-    <?php echo $this->element('homepage_banner2'); ?>
+    <div class="container hr">
+        <ul class="row product-list">
+            <li class="grid_6">
+                <?php foreach ($HomeMiddleSnippets as $key => $HomeMiddleSnippet): ?>
+                    <?php if ($key % 2 == 0 && $key !== 0): ?>
+                    </li>
+                    <li class="grid_6">
+                    <?php endif; ?>
+                    <div class="box wow fadeInRight">
+                        <div class="box_aside">
+                            <div class="icon fa-comments"></div>
+                        </div>
+                        <div class="box_cnt__no-flow">
+                            <h3><a href="#"><?php echo $HomeUpperSnippet['HomeUpperSnippet']['header']; ?></a></h3>
+                            <p><?php echo $HomeUpperSnippet['HomeUpperSnippet']['details']; ?></p>
+                        </div>
+                    </div>
+                    <hr>
+                <?php endforeach; ?>
+            </li>
+        </ul>
+    </div>
 </section>
 <section class="well1">
     <div class="container">
