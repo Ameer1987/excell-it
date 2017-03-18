@@ -17,8 +17,8 @@
         "type" => "ROADMAP",
         "custom" => "mapTypeControl: false, disableDefaultUI: true",
         "localize" => false,
-        "latitude" => $contacts[0]['Contact']['position_latitude'],
-        "longitude" => $contacts[0]['Contact']['position_longitude'],
+        "latitude" => $contacts['Contact']['position_latitude'],
+        "longitude" => $contacts['Contact']['position_longitude'],
         "marker" => true,
         "infoWindow" => true
     );
@@ -29,8 +29,8 @@
     <?php
     echo $this->GoogleMap->addMarker("map_canvas", 1, array(
         "showWindow" => true,
-        "latitude" => $contacts[0]['Contact']['position_latitude'],
-        "longitude" => $contacts[0]['Contact']['position_longitude'],
+        "latitude" => $contacts['Contact']['position_latitude'],
+        "longitude" => $contacts['Contact']['position_longitude'],
         "windowText" => "Excel IT Company",
         "markerTitle" => "Excel IT",
         "markerIcon" => "http://labs.google.com/ridefinder/images/mm_20_purple.png",
@@ -45,27 +45,27 @@
                 <div class="grid_4">
                     <dl class="info">
                         <dt>Name</dt>
-                        <dd><?php echo $contacts[0]['Contact']['name']; ?></dd>
-                        <dd><?php echo $contacts[0]['Contact']['address']; ?></dd>
-                        <dd><?php echo $contacts[0]['Contact']['phone']; ?></dd>
+                        <dd><?php echo $contacts['Contact']['name']; ?></dd>
+                        <dd><?php echo $contacts['Contact']['address']; ?></dd>
+                        <dd><?php echo $contacts['Contact']['phone']; ?></dd>
                     </dl>
                 </div>
                 <div class="grid_4">
                     <dl class="info">
                         <dt>Social</dt>
-                        <dd><?php echo $contacts[0]['Contact']['facebook_link']; ?></dd>
-                        <dd><?php echo $contacts[0]['Contact']['twitter_link']; ?></dd>
-                        <dd><?php echo $contacts[0]['Contact']['skype_link']; ?></dd>
+                        <dd><?php echo $contacts['Contact']['facebook_link']; ?></dd>
+                        <dd><?php echo $contacts['Contact']['twitter_link']; ?></dd>
+                        <dd><?php echo $contacts['Contact']['skype_link']; ?></dd>
                     </dl>
                 </div>
                 <div class="grid_4">
                     <dl class="info">
                         <dt>Emails</dt>
-                        <?php $emails = explode(',', $contacts[0]['Contact']['email']); ?>
+                        <?php $emails = explode(',', $contacts['Contact']['email']); ?>
                         <?php foreach ($emails as $email): ?>
                             <dd><?php echo $email; ?></dd>
                         <?php endforeach; ?>
-                        <dd><?php echo $contacts[0]['Contact']['details']; ?></dd>
+                        <dd><?php echo $contacts['Contact']['details']; ?></dd>
                     </dl>
                 </div>
             </div>
