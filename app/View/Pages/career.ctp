@@ -15,7 +15,7 @@
                 <?php endif ?>
                 <div class="grid_4">
                     <?php if ($career['Career']['image_name']): ?>
-                        <img src="../img/<?php echo $career['Career']['image_name'] ?>" alt="">
+                        <img src="../files/files/<?php echo $career['Career']['image_name'] ?>" alt="">
                     <?php endif ?>
                     <h3><?php echo $career['Career']['header'] ?></h3>
                     <p><?php echo $career['Career']['details'] ?></p>
