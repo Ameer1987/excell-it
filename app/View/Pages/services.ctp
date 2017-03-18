@@ -15,7 +15,7 @@
                 <?php endif ?>
                 <div class="grid_4">
                     <?php if ($service['Service']['image_name']): ?>
-                        <img src="../img/<?php echo $service['Service']['image_name'] ?>" alt="">
+                        <img src="../files/files/<?php echo $service['Service']['image_name'] ?>" alt="">
                     <?php endif ?>
                     <h3><?php echo $service['Service']['header'] ?></h3>
                     <p><?php echo $service['Service']['details'] ?></p>
