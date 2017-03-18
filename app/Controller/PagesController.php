@@ -42,8 +42,8 @@ class PagesController extends AppController {
         $this->set('services', $services);
 
         $this->loadModel('ServiceSnippet');
-        $service_snippets = $this->ServiceSnippet->find('all');
-        $this->set('service_snippets', $service_snippets);
+        $service_snippet = $this->ServiceSnippet->find('first');
+        $this->set('service_snippet', $service_snippet);
     }
 
     /**
