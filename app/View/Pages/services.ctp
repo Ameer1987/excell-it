@@ -30,13 +30,13 @@
     <div class="container">
         <div class="row">
             <div class="grid_7 preffix_5">
-                <?php if (count($service_snippets) > 0): ?>
-                    <h2><?php echo $service_snippets[0]['ServiceSnippet']['header'] ?></h2>
-                    <p><?php echo $service_snippets[0]['ServiceSnippet']['intro'] ?></p>
+                <?php if ($service_snippet): ?>
+                    <h2><?php echo $service_snippet['ServiceSnippet']['header'] ?></h2>
+                    <p><?php echo $service_snippet['ServiceSnippet']['intro'] ?></p>
                     <div class="row off4">
                         <div class="grid_3">
                             <ul class="marked-list wow fadeInRight">
-                                <?php foreach ($service_snippets[0]['ServiceSnippetPoint'] as $key => $serviceSnippetPoint): ?>
+                                <?php foreach ($service_snippet['ServiceSnippetPoint'] as $key => $serviceSnippetPoint): ?>
                                     <?php if ($key > 0 and $key % 3 === 0): ?>  
                                     </ul>
                                 </div>
