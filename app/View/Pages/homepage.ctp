@@ -14,7 +14,11 @@
         <ul class="banner">
             <?php foreach ($HomeUpperSnippets as $HomeUpperSnippet): ?>
                 <li>
-                    <div class="fa-globe"></div>
+                    <div>
+                        <?php if ($HomeUpperSnippet['HomeUpperSnippet']['image_name']): ?>
+                            <img style="width: 100px;" src="../files/files/<?php echo $HomeUpperSnippet['HomeUpperSnippet']['image_name'] ?>" alt="">
+                        <?php endif ?>
+                    </div>
                     <h3><?php echo $HomeUpperSnippet['HomeUpperSnippet']['header']; ?></h3>
                     <p><?php echo $HomeUpperSnippet['HomeUpperSnippet']['details']; ?></p>
                 </li>
@@ -33,11 +37,13 @@
                     <?php endif; ?>
                     <div class="box wow fadeInRight">
                         <div class="box_aside">
-                            <div class="icon fa-comments"></div>
+                            <?php if ($HomeMiddleSnippet['HomeMiddleSnippet']['image_name']): ?>
+                                <img style="width: 100px;" src="../files/files/<?php echo $HomeMiddleSnippet['HomeMiddleSnippet']['image_name'] ?>" alt="">
+                            <?php endif ?>
                         </div>
                         <div class="box_cnt__no-flow">
-                            <h3><a href="#"><?php echo $HomeUpperSnippet['HomeUpperSnippet']['header']; ?></a></h3>
-                            <p><?php echo $HomeUpperSnippet['HomeUpperSnippet']['details']; ?></p>
+                            <h3><a href="#"><?php echo $HomeMiddleSnippet['HomeMiddleSnippet']['header']; ?></a></h3>
+                            <p><?php echo $HomeMiddleSnippet['HomeMiddleSnippet']['details']; ?></p>
                         </div>
                     </div>
                     <hr>
