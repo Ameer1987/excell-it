@@ -31,9 +31,9 @@
                             <?php echo __d('admin', 'Actions');?>                            <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu pull-right">
-                				<li><?php echo $this->Html->link(__d('admin', 'Edit Homepage Slider'), array('action' => 'edit', $homepageSlider['HomepageSlider']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
+                		<li><?php echo $this->Html->link(__d('admin', 'Edit Homepage Slider'), array('action' => 'edit', $homepageSlider['HomepageSlider']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
 				<li><?php echo $this->Form->postLink(__d('admin', 'Delete Homepage Slider'), array('action' => 'delete', $homepageSlider['HomepageSlider']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $homepageSlider['HomepageSlider']['id'])); ?> </li>
-				<li><?php //  echo $this->Html->link(__d('admin', 'New Homepage Slider'), array('action' => 'add')); ?> </li>
+				<li><?php echo $this->Html->link(__d('admin', 'New Homepage Slider'), array('action' => 'add')); ?> </li>
 				<li><?php echo $this->Html->link(__d('admin', 'List Homepage Sliders'), array('action' => 'index')); ?> </li>
                         </ul>
                     </div>
