@@ -9,7 +9,9 @@ class PagesController extends AppController {
     public $helpers = array('GoogleMap');
 
     function beforeFilter() {
-        
+        $this->loadModel('Header');
+        $Header = $this->Header->find('first');
+        $this->set('Header', $Header);
     }
 
     /**
