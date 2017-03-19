@@ -30,7 +30,7 @@ foreach ($contacts as $contact): ?>
 		<td class="actions">
 			<?php echo $this->Html->link(__d('admin', 'View'), array('plugin' => 'admin', 'controller' => 'admin_contacts', 'action' => 'view', $contact[$contactsTableModelAlias]['id']), array('class' => 'btn btn-info btn-mini')); ?>
 			<?php echo $this->Html->link(__d('admin', 'Edit'), array('plugin' => 'admin', 'controller' => 'admin_contacts', 'action' => 'edit', $contact[$contactsTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-mini')); ?>
-			<?php echo $this->Form->postLink(__d('admin', 'Delete'), array('plugin' => 'admin', 'controller' => 'admin_contacts', 'action' => 'delete', $contact[$contactsTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-danger btn-mini'), __d('admin', 'Are you sure you want to delete # %s?', $contact[$contactsTableModelAlias]['id'])); ?>
+			<?php // echo $this->Form->postLink(__d('admin', 'Delete'), array('plugin' => 'admin', 'controller' => 'admin_contacts', 'action' => 'delete', $contact[$contactsTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-danger btn-mini'), __d('admin', 'Are you sure you want to delete # %s?', $contact[$contactsTableModelAlias]['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
