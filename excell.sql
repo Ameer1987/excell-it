@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2017 at 10:48 AM
+-- Generation Time: Mar 19, 2017 at 10:24 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -19,6 +19,59 @@ SET time_zone = "+00:00";
 --
 -- Database: `excell`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bottom_1_blocks`
+--
+
+CREATE TABLE IF NOT EXISTS `bottom_1_blocks` (
+`id` int(11) NOT NULL,
+  `header` varchar(100) NOT NULL,
+  `text` text NOT NULL,
+  `image_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bottom_2_blocks`
+--
+
+CREATE TABLE IF NOT EXISTS `bottom_2_blocks` (
+`id` int(11) NOT NULL,
+  `header` varchar(100) NOT NULL,
+  `text` text NOT NULL,
+  `image_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bottom_3_blocks`
+--
+
+CREATE TABLE IF NOT EXISTS `bottom_3_blocks` (
+`id` int(11) NOT NULL,
+  `header` varchar(100) NOT NULL,
+  `text` text NOT NULL,
+  `image_name` varchar(100) NOT NULL,
+  `background_colour` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bottom_4_blocks`
+--
+
+CREATE TABLE IF NOT EXISTS `bottom_4_blocks` (
+`id` int(11) NOT NULL,
+  `header` varchar(100) NOT NULL,
+  `text` text NOT NULL,
+  `image_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -215,6 +268,30 @@ INSERT INTO `users` (`id`, `created`, `modified`, `email`, `password`) VALUES
 --
 
 --
+-- Indexes for table `bottom_1_blocks`
+--
+ALTER TABLE `bottom_1_blocks`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bottom_2_blocks`
+--
+ALTER TABLE `bottom_2_blocks`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bottom_3_blocks`
+--
+ALTER TABLE `bottom_3_blocks`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bottom_4_blocks`
+--
+ALTER TABLE `bottom_4_blocks`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `careers`
 --
 ALTER TABLE `careers`
@@ -284,6 +361,26 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `bottom_1_blocks`
+--
+ALTER TABLE `bottom_1_blocks`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `bottom_2_blocks`
+--
+ALTER TABLE `bottom_2_blocks`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `bottom_3_blocks`
+--
+ALTER TABLE `bottom_3_blocks`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `bottom_4_blocks`
+--
+ALTER TABLE `bottom_4_blocks`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `careers`
 --
