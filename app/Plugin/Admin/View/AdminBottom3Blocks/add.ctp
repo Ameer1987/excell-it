@@ -15,9 +15,9 @@
 		echo $this->ExtendedForm->input('image_name', array_merge(array('label' => __d('admin', 'Image')), array('type' => 'file')));
 		if(isset($this->request->params['named']['image_name'])) echo '</div>';
 
-		if(isset($this->request->params['named']['background_colour'])) echo '<div style="display: none;">';
-		echo $this->ExtendedForm->input('background_colour', array_merge(array('label' => __d('admin', 'Background Colour'))));
-		if(isset($this->request->params['named']['background_colour'])) echo '</div>';
+//		if(isset($this->request->params['named']['background_colour'])) echo '<div style="display: none;">';
+//		echo $this->ExtendedForm->input('background_colour', array_merge(array('label' => __d('admin', 'Background Colour'))));
+//		if(isset($this->request->params['named']['background_colour'])) echo '</div>';
 
 	?>
     </fieldset>
