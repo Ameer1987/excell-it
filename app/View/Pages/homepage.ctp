@@ -138,3 +138,10 @@
     </div>
 </section>
 <?php $this->end(); ?>
+
+<script>
+    $(document).ready(function () {
+
+        $('ul').addClass('marked-list');
+    });
+</script>
