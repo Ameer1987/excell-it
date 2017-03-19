@@ -18,7 +18,7 @@ foreach ($bottom2Blocks as $bottom2Block): ?>
 		<td class="actions">
 			<?php echo $this->Html->link(__d('admin', 'View'), array('plugin' => 'admin', 'controller' => 'admin_bottom2_blocks', 'action' => 'view', $bottom2Block[$bottom2BlocksTableModelAlias]['id']), array('class' => 'btn btn-info btn-mini')); ?>
 			<?php echo $this->Html->link(__d('admin', 'Edit'), array('plugin' => 'admin', 'controller' => 'admin_bottom2_blocks', 'action' => 'edit', $bottom2Block[$bottom2BlocksTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-mini')); ?>
-			<?php echo $this->Form->postLink(__d('admin', 'Delete'), array('plugin' => 'admin', 'controller' => 'admin_bottom2_blocks', 'action' => 'delete', $bottom2Block[$bottom2BlocksTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-danger btn-mini'), __d('admin', 'Are you sure you want to delete # %s?', $bottom2Block[$bottom2BlocksTableModelAlias]['id'])); ?>
+			<?php // echo $this->Form->postLink(__d('admin', 'Delete'), array('plugin' => 'admin', 'controller' => 'admin_bottom2_blocks', 'action' => 'delete', $bottom2Block[$bottom2BlocksTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-danger btn-mini'), __d('admin', 'Are you sure you want to delete # %s?', $bottom2Block[$bottom2BlocksTableModelAlias]['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
