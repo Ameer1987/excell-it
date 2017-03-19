@@ -78,7 +78,8 @@
                         <ul class="dropdown-menu pull-right">
                 				<li><?php echo $this->Html->link(__d('admin', 'Edit Contact'), array('action' => 'edit', $contact['Contact']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
 				<li><?php echo $this->Form->postLink(__d('admin', 'Delete Contact'), array('action' => 'delete', $contact['Contact']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $contact['Contact']['id'])); ?> </li>
-				<li><?php // echo $this->Html->link(__d('admin', 'New Contact'), array('action' => 'add')); ?> </li>
+				<li>
+                                    <?php // echo $this->Html->link(__d('admin', 'New Contact'), array('action' => 'add')); ?> </li>
 				<li><?php echo $this->Html->link(__d('admin', 'List Contacts'), array('action' => 'index')); ?> </li>
                         </ul>
                     </div>
