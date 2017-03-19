@@ -40,6 +40,22 @@ class PagesController extends AppController {
         ));
         $this->set('HomeMiddleSnippets', $HomeMiddleSnippets);
 
+        $this->loadModel('Bottom1Block');
+        $Bottom1Block = $this->Bottom1Block->find('first');
+        $this->set('Bottom1Block', $Bottom1Block);
+
+        $this->loadModel('Bottom2Block');
+        $Bottom2Block = $this->Bottom2Block->find('first');
+        $this->set('Bottom2Block', $Bottom2Block);
+
+        $this->loadModel('Bottom3Block');
+        $Bottom3Block = $this->Bottom3Block->find('first');
+        $this->set('Bottom3Block', $Bottom3Block);
+
+        $this->loadModel('Bottom4Block');
+        $Bottom4Blocks = $this->Bottom4Block->find('all');
+        $this->set('Bottom4Blocks', $Bottom4Blocks);
+
         $this->loadModel('Contact');
         $contacts = $this->Contact->find('first');
         $this->set('contacts', $contacts);
