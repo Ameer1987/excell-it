@@ -19,7 +19,7 @@
 			&nbsp;
 		</dd>
 				<dt><?php echo __d('admin', 'Service Snippet'); ?></dt>
-		<dd>
+				<dd>
 			<?php echo $this->Html->link($serviceSnippetPoint['ServiceSnippet']['toString'], array('plugin' => 'admin', 'controller' => 'admin_service_snippets', 'action' => 'view', $serviceSnippetPoint['ServiceSnippet']['id'])); ?>
 			&nbsp;
 		</dd>

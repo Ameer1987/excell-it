@@ -7,14 +7,12 @@ $this->Paginator->options(array(
 <table class="table table-striped">
 <tr>
 	<th><?php echo $this->Paginator->sort('header', __d('admin', 'header'), array('model' => $serviceSnippetsTableModelAlias));?></th>
-	<th><?php echo $this->Paginator->sort('image_name', __d('admin', 'image_name'), array('model' => $serviceSnippetsTableModelAlias));?></th>
     <th class="actions"><?php echo __d('admin', 'Actions');?></th>
 </tr>
 <?php
 foreach ($serviceSnippets as $serviceSnippet): ?>
 	<tr>
 		<td><?php echo h($serviceSnippet[$serviceSnippetsTableModelAlias]['header']); ?>&nbsp;</td>
-		<td><?php echo h($serviceSnippet[$serviceSnippetsTableModelAlias]['image_name']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__d('admin', 'View'), array('plugin' => 'admin', 'controller' => 'admin_service_snippets', 'action' => 'view', $serviceSnippet[$serviceSnippetsTableModelAlias]['id']), array('class' => 'btn btn-info btn-mini')); ?>
 			<?php echo $this->Html->link(__d('admin', 'Edit'), array('plugin' => 'admin', 'controller' => 'admin_service_snippets', 'action' => 'edit', $serviceSnippet[$serviceSnippetsTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-mini')); ?>

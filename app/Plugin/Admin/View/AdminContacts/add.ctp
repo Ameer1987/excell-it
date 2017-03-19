@@ -11,9 +11,9 @@
 		echo $this->ExtendedForm->input('details', array_merge(array('label' => __d('admin', 'Details'))));
 		if(isset($this->request->params['named']['details'])) echo '</div>';
 
-		if(isset($this->request->params['named']['image_name'])) echo '<div style="display: none;">';
-		echo $this->ExtendedForm->input('image_name', array_merge(array('label' => __d('admin', 'Image Name'))));
-		if(isset($this->request->params['named']['image_name'])) echo '</div>';
+		if(isset($this->request->params['named']['mobile'])) echo '<div style="display: none;">';
+		echo $this->ExtendedForm->input('mobile', array_merge(array('label' => __d('admin', 'Mobile'))));
+		if(isset($this->request->params['named']['mobile'])) echo '</div>';
 
 		if(isset($this->request->params['named']['position_latitude'])) echo '<div style="display: none;">';
 		echo $this->ExtendedForm->input('position_latitude', array_merge(array('label' => __d('admin', 'Position Latitude'))));
@@ -30,10 +30,6 @@
 		if(isset($this->request->params['named']['address'])) echo '<div style="display: none;">';
 		echo $this->ExtendedForm->input('address', array_merge(array('label' => __d('admin', 'Address'))));
 		if(isset($this->request->params['named']['address'])) echo '</div>';
-
-		if(isset($this->request->params['named']['logo_name'])) echo '<div style="display: none;">';
-		echo $this->ExtendedForm->input('logo_name', array_merge(array('label' => __d('admin', 'Logo Name'))));
-		if(isset($this->request->params['named']['logo_name'])) echo '</div>';
 
 		if(isset($this->request->params['named']['facebook_link'])) echo '<div style="display: none;">';
 		echo $this->ExtendedForm->input('facebook_link', array_merge(array('label' => __d('admin', 'Facebook Link'))));

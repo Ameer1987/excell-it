@@ -9,6 +9,7 @@ $this->Paginator->options(array(
 	<th><?php echo $this->Paginator->sort('header', __d('admin', 'header'), array('model' => $homeUpperSnippetsTableModelAlias));?></th>
 	<th><?php echo $this->Paginator->sort('order', __d('admin', 'order'), array('model' => $homeUpperSnippetsTableModelAlias));?></th>
 	<th><?php echo $this->Paginator->sort('image_name', __d('admin', 'image_name'), array('model' => $homeUpperSnippetsTableModelAlias));?></th>
+	<th><?php echo $this->Paginator->sort('background_colour', __d('admin', 'background_colour'), array('model' => $homeUpperSnippetsTableModelAlias));?></th>
     <th class="actions"><?php echo __d('admin', 'Actions');?></th>
 </tr>
 <?php
@@ -17,6 +18,7 @@ foreach ($homeUpperSnippets as $homeUpperSnippet): ?>
 		<td><?php echo h($homeUpperSnippet[$homeUpperSnippetsTableModelAlias]['header']); ?>&nbsp;</td>
 		<td><?php echo h($homeUpperSnippet[$homeUpperSnippetsTableModelAlias]['order']); ?>&nbsp;</td>
 		<td><?php echo h($homeUpperSnippet[$homeUpperSnippetsTableModelAlias]['image_name']); ?>&nbsp;</td>
+		<td><?php echo h($homeUpperSnippet[$homeUpperSnippetsTableModelAlias]['background_colour']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__d('admin', 'View'), array('plugin' => 'admin', 'controller' => 'admin_home_upper_snippets', 'action' => 'view', $homeUpperSnippet[$homeUpperSnippetsTableModelAlias]['id']), array('class' => 'btn btn-info btn-mini')); ?>
 			<?php echo $this->Html->link(__d('admin', 'Edit'), array('plugin' => 'admin', 'controller' => 'admin_home_upper_snippets', 'action' => 'edit', $homeUpperSnippet[$homeUpperSnippetsTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-mini')); ?>

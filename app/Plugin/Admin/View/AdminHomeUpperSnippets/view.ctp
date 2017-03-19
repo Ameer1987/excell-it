@@ -33,6 +33,11 @@
 			<?php echo h($homeUpperSnippet['HomeUpperSnippet']['image_name']); ?>
 			&nbsp;
 		</dd>
+				<dt><?php echo __d('admin', 'Background Colour'); ?></dt>
+				<dd>
+			<?php echo h($homeUpperSnippet['HomeUpperSnippet']['background_colour']); ?>
+			&nbsp;
+		</dd>
                     </dl>
                 </div>
                                 <div class="actions span2" style="min-height: 160px;">

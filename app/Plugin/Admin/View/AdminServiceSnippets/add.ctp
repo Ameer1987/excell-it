@@ -11,10 +11,6 @@
 		echo $this->ExtendedForm->input('intro', array_merge(array('label' => __d('admin', 'Intro'))));
 		if(isset($this->request->params['named']['intro'])) echo '</div>';
 
-		if(isset($this->request->params['named']['image_name'])) echo '<div style="display: none;">';
-		echo $this->ExtendedForm->input('image_name', array_merge(array('label' => __d('admin', 'Image')), array('type' => 'file')));
-		if(isset($this->request->params['named']['image_name'])) echo '</div>';
-
 	?>
     </fieldset>
 <?php echo $this->ExtendedForm->end(array('label' => __d('admin', 'Save ServiceSnippet'), 'class' => 'btn btn-primary', 'div' => false, 'before' => '<div class="control-group"><div class="controls">', 'after' => "\n" . $this->Html->link(__d('admin', 'Cancel'), $redirectUrl, array('class' => 'btn')) . '</div></div>'));?>

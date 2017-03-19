@@ -8,11 +8,7 @@
             <div class="row-fluid">
                 <div class="span10">
                     <dl class="dl-horizontal">
-                    				<dt><?php echo __d('admin', 'Id'); ?></dt>
-				<dd>
-			<?php echo h($career['Career']['id']); ?>
-			&nbsp;
-		</dd>
+                    				
 				<dt><?php echo __d('admin', 'Header'); ?></dt>
 				<dd>
 			<?php echo h($career['Career']['header']); ?>

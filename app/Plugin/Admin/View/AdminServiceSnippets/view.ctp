@@ -24,11 +24,6 @@
 			<?php echo h($serviceSnippet['ServiceSnippet']['intro']); ?>
 			&nbsp;
 		</dd>
-				<dt><?php echo __d('admin', 'Image Name'); ?></dt>
-				<dd>
-			<?php echo h($serviceSnippet['ServiceSnippet']['image_name']); ?>
-			&nbsp;
-		</dd>
                     </dl>
                 </div>
                                 <div class="actions span2" style="min-height: 160px;">

@@ -23,9 +23,9 @@
 			<?php echo h($contact['Contact']['details']); ?>
 			&nbsp;
 		</dd>
-				<dt><?php echo __d('admin', 'Image Name'); ?></dt>
+				<dt><?php echo __d('admin', 'Mobile'); ?></dt>
 				<dd>
-			<?php echo h($contact['Contact']['image_name']); ?>
+			<?php echo h($contact['Contact']['mobile']); ?>
 			&nbsp;
 		</dd>
 				<dt><?php echo __d('admin', 'Position Latitude'); ?></dt>
@@ -46,11 +46,6 @@
 				<dt><?php echo __d('admin', 'Address'); ?></dt>
 				<dd>
 			<?php echo h($contact['Contact']['address']); ?>
-			&nbsp;
-		</dd>
-				<dt><?php echo __d('admin', 'Logo Name'); ?></dt>
-				<dd>
-			<?php echo h($contact['Contact']['logo_name']); ?>
 			&nbsp;
 		</dd>
 				<dt><?php echo __d('admin', 'Facebook Link'); ?></dt>
