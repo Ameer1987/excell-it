@@ -5,6 +5,8 @@ App::uses('AppController', 'Controller');
  *
  * @property ServiceSnippetPoint $ServiceSnippetPoint
  * @property PaginatorComponent $Paginator
+ * @property SessionComponent $Session
+ * @property FlashComponent $Flash
  */
 class ServiceSnippetPointsController extends AppController {
 
@@ -13,7 +15,7 @@ class ServiceSnippetPointsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Session', 'Flash');
 
 /**
  * index method
