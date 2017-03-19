@@ -28,7 +28,8 @@
     <div class="container banner_wr">
         <ul class="banner">
             <?php foreach ($HomeUpperSnippets as $HomeUpperSnippet): ?>
-                <li>
+                <?php $backgroundColor = $HomeUpperSnippet['HomeUpperSnippet']['background_colour'] ? ('background-color: ' . $HomeUpperSnippet['HomeUpperSnippet']['background_colour'] . '; ') : ''; ?>
+                <li style="<?php echo $backgroundColor; ?>">
                     <div>
                         <?php if ($HomeUpperSnippet['HomeUpperSnippet']['image_name']): ?>
                             <img style="width: 100px;" src="../files/files/<?php echo $HomeUpperSnippet['HomeUpperSnippet']['image_name'] ?>" alt="">
