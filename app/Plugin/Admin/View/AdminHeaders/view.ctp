@@ -48,7 +48,7 @@
                         <ul class="dropdown-menu pull-right">
                 				<li><?php echo $this->Html->link(__d('admin', 'Edit Header'), array('action' => 'edit', $header['Header']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
 				<li><?php echo $this->Form->postLink(__d('admin', 'Delete Header'), array('action' => 'delete', $header['Header']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $header['Header']['id'])); ?> </li>
-				<li><?php echo $this->Html->link(__d('admin', 'New Header'), array('action' => 'add')); ?> </li>
+				<li><?php // echo $this->Html->link(__d('admin', 'New Header'), array('action' => 'add')); ?> </li>
 				<li><?php echo $this->Html->link(__d('admin', 'List Headers'), array('action' => 'index')); ?> </li>
                         </ul>
                     </div>

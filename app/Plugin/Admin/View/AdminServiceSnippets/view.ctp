@@ -34,7 +34,7 @@
                         <ul class="dropdown-menu pull-right">
                 				<li><?php echo $this->Html->link(__d('admin', 'Edit Service Snippet'), array('action' => 'edit', $serviceSnippet['ServiceSnippet']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
 				<li><?php echo $this->Form->postLink(__d('admin', 'Delete Service Snippet'), array('action' => 'delete', $serviceSnippet['ServiceSnippet']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $serviceSnippet['ServiceSnippet']['id'])); ?> </li>
-				<li><?php echo $this->Html->link(__d('admin', 'New Service Snippet'), array('action' => 'add')); ?> </li>
+				<li><?php // echo $this->Html->link(__d('admin', 'New Service Snippet'), array('action' => 'add')); ?> </li>
 				<li><?php echo $this->Html->link(__d('admin', 'List Service Snippets'), array('action' => 'index')); ?> </li>
                         </ul>
                     </div>
