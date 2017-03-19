@@ -25,11 +25,19 @@ class PagesController extends AppController {
         $this->set('HomepageSliders', $HomepageSliders);
 
         $this->loadModel('HomeUpperSnippet');
-        $HomeUpperSnippets = $this->HomeUpperSnippet->find('all');
+        $HomeUpperSnippets = $this->HomeUpperSnippet->find('all', array(
+            'order' => array(
+                'HomeUpperSnippet.order' => 'ASC',
+            )
+        ));
         $this->set('HomeUpperSnippets', $HomeUpperSnippets);
 
         $this->loadModel('HomeMiddleSnippet');
-        $HomeMiddleSnippets = $this->HomeMiddleSnippet->find('all');
+        $HomeMiddleSnippets = $this->HomeMiddleSnippet->find('all', array(
+            'order' => array(
+                'HomeMiddleSnippet.order' => 'ASC',
+            )
+        ));
         $this->set('HomeMiddleSnippets', $HomeMiddleSnippets);
 
         $this->loadModel('Contact');
