@@ -16,7 +16,7 @@ foreach ($serviceSnippets as $serviceSnippet): ?>
 		<td class="actions">
 			<?php echo $this->Html->link(__d('admin', 'View'), array('plugin' => 'admin', 'controller' => 'admin_service_snippets', 'action' => 'view', $serviceSnippet[$serviceSnippetsTableModelAlias]['id']), array('class' => 'btn btn-info btn-mini')); ?>
 			<?php echo $this->Html->link(__d('admin', 'Edit'), array('plugin' => 'admin', 'controller' => 'admin_service_snippets', 'action' => 'edit', $serviceSnippet[$serviceSnippetsTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-mini')); ?>
-			<?php echo $this->Form->postLink(__d('admin', 'Delete'), array('plugin' => 'admin', 'controller' => 'admin_service_snippets', 'action' => 'delete', $serviceSnippet[$serviceSnippetsTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-danger btn-mini'), __d('admin', 'Are you sure you want to delete # %s?', $serviceSnippet[$serviceSnippetsTableModelAlias]['id'])); ?>
+			<?php // echo $this->Form->postLink(__d('admin', 'Delete'), array('plugin' => 'admin', 'controller' => 'admin_service_snippets', 'action' => 'delete', $serviceSnippet[$serviceSnippetsTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-danger btn-mini'), __d('admin', 'Are you sure you want to delete # %s?', $serviceSnippet[$serviceSnippetsTableModelAlias]['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
