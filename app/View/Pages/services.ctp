@@ -26,11 +26,11 @@
         <hr>
     </div>
 </section>
-<section class="well1 ins4 bg-image">
-    <div class="container">
-        <div class="row">
-            <div class="grid_7 preffix_5">
-                <?php if ($service_snippet): ?>
+<?php if ($service_snippet): ?>
+    <section class="well1 ins4 bg-image">
+        <div class="container">
+            <div class="row">
+                <div class="grid_7 preffix_5">
                     <h2><?php echo $service_snippet['ServiceSnippet']['header'] ?></h2>
                     <p><?php echo $service_snippet['ServiceSnippet']['intro'] ?></p>
                     <div class="row off4">
@@ -48,8 +48,8 @@
                             </ul>
                         </div>
                     </div>
-                <?php endif; ?>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
