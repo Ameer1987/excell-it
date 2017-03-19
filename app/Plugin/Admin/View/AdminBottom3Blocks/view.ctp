@@ -28,11 +28,11 @@
 			<?php echo h($bottom3Block['Bottom3Block']['image_name']); ?>
 			&nbsp;
 		</dd>
-				<dt><?php echo __d('admin', 'Background Colour'); ?></dt>
+<!--				<dt><?php // echo __d('admin', 'Background Colour'); ?></dt>
 				<dd>
-			<?php echo h($bottom3Block['Bottom3Block']['background_colour']); ?>
+			<?php // echo h($bottom3Block['Bottom3Block']['background_colour']); ?>
 			&nbsp;
-		</dd>
+		</dd>-->
                     </dl>
                 </div>
                                 <div class="actions span2" style="min-height: 160px;">
