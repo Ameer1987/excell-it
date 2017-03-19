@@ -20,6 +20,10 @@ class PagesController extends AppController {
     function homepage() {
         $this->layout = 'pages';
 
+        $this->loadModel('HomepageSlider');
+        $HomepageSliders = $this->HomepageSlider->find('all');
+        $this->set('HomepageSliders', $HomepageSliders);
+
         $this->loadModel('HomeUpperSnippet');
         $HomeUpperSnippets = $this->HomeUpperSnippet->find('all');
         $this->set('HomeUpperSnippets', $HomeUpperSnippets);
