@@ -20,7 +20,7 @@ foreach ($bottom3Blocks as $bottom3Block): ?>
 		<td class="actions">
 			<?php echo $this->Html->link(__d('admin', 'View'), array('plugin' => 'admin', 'controller' => 'admin_bottom3_blocks', 'action' => 'view', $bottom3Block[$bottom3BlocksTableModelAlias]['id']), array('class' => 'btn btn-info btn-mini')); ?>
 			<?php echo $this->Html->link(__d('admin', 'Edit'), array('plugin' => 'admin', 'controller' => 'admin_bottom3_blocks', 'action' => 'edit', $bottom3Block[$bottom3BlocksTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-mini')); ?>
-			<?php echo $this->Form->postLink(__d('admin', 'Delete'), array('plugin' => 'admin', 'controller' => 'admin_bottom3_blocks', 'action' => 'delete', $bottom3Block[$bottom3BlocksTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-danger btn-mini'), __d('admin', 'Are you sure you want to delete # %s?', $bottom3Block[$bottom3BlocksTableModelAlias]['id'])); ?>
+			<?php // echo $this->Form->postLink(__d('admin', 'Delete'), array('plugin' => 'admin', 'controller' => 'admin_bottom3_blocks', 'action' => 'delete', $bottom3Block[$bottom3BlocksTableModelAlias]['id'], '?' => array('redirect' => $redirectUrl)), array('class' => 'btn btn-danger btn-mini'), __d('admin', 'Are you sure you want to delete # %s?', $bottom3Block[$bottom3BlocksTableModelAlias]['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

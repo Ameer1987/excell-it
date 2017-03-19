@@ -42,7 +42,7 @@
                         </a>
                         <ul class="dropdown-menu pull-right">
                 				<li><?php echo $this->Html->link(__d('admin', 'Edit Bottom3 Block'), array('action' => 'edit', $bottom3Block['Bottom3Block']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
-				<li><?php echo $this->Form->postLink(__d('admin', 'Delete Bottom3 Block'), array('action' => 'delete', $bottom3Block['Bottom3Block']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $bottom3Block['Bottom3Block']['id'])); ?> </li>
+				<li><?php // echo $this->Form->postLink(__d('admin', 'Delete Bottom3 Block'), array('action' => 'delete', $bottom3Block['Bottom3Block']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $bottom3Block['Bottom3Block']['id'])); ?> </li>
 				<li><?php // echo $this->Html->link(__d('admin', 'New Bottom3 Block'), array('action' => 'add')); ?> </li>
 				<li><?php echo $this->Html->link(__d('admin', 'List Bottom3 Blocks'), array('action' => 'index')); ?> </li>
                         </ul>
