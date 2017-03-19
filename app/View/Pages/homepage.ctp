@@ -77,7 +77,7 @@
 <section class="well1">
     <div class="container">
         <div class="row">
-            <div class="grid_4">
+            <div class="grid_4 bottom_block">
                 <?php if ($Bottom1Block['Bottom1Block']['text']): ?>
                     <h2><?php echo $Bottom1Block['Bottom1Block']['header'] ?></h2>
                     <?php if ($Bottom1Block['Bottom1Block']['image_name']): ?>
@@ -86,7 +86,7 @@
                     <p><?php echo $Bottom1Block['Bottom1Block']['text'] ?></p>
                 <?php endif; ?>
             </div>
-            <div class="grid_4">
+            <div class="grid_4 bottom_block">
                 <?php if ($Bottom2Block['Bottom2Block']['text']): ?>
                     <h2><?php echo $Bottom2Block['Bottom2Block']['header'] ?></h2>
                     <?php if ($Bottom2Block['Bottom2Block']['image_name']): ?>
@@ -142,6 +142,6 @@
 <script>
     $(document).ready(function () {
 
-        $('ul').addClass('marked-list');
+        $('.bottom_block ul').addClass('marked-list');
     });
 </script>
