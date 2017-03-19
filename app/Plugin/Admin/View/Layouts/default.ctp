@@ -35,7 +35,8 @@
 					<li><?php echo $this->Html->link('Contacts', '/' . $backendPluginNameUnderscored . '/contacts');?></li>
 					<li><?php echo $this->Html->link('Services', '/' . $backendPluginNameUnderscored . '/services');?></li>
 					<li><?php echo $this->Html->link('Service Snippets', '/' . $backendPluginNameUnderscored . '/service_snippets');?></li>
-					<li><?php echo $this->Html->link('Messages', '/' . $backendPluginNameUnderscored . '/messages');?></li>
+					<li><?php echo $this->Html->link('Homepage Sliders', '/' . $backendPluginNameUnderscored . '/homepage_sliders');?></li>
+					<li><?php echo $this->Html->link('Headers', '/' . $backendPluginNameUnderscored . '/headers');?></li>
 					<li><?php echo $this->Html->link('Upper Snippets', '/' . $backendPluginNameUnderscored . '/home_upper_snippets');?></li>
 					<li><?php echo $this->Html->link('Middle Snippets', '/' . $backendPluginNameUnderscored . '/home_middle_snippets');?></li>
 				</ul>
