@@ -13,10 +13,7 @@
 			<?php echo h($header['Header']['id']); ?>
 			&nbsp;
 		</dd>
-				<dt><?php echo __d('admin', 'Logo Name'); ?></dt>
-				<dd>
-			<?php echo h($header['Header']['logo_name']); ?>
-			&nbsp;
+				
 		</dd>
 				<dt><?php echo __d('admin', 'Phone'); ?></dt>
 				<dd>
@@ -28,11 +25,7 @@
 			<?php echo h($header['Header']['text']); ?>
 			&nbsp;
 		</dd>
-				<dt><?php echo __d('admin', 'Message'); ?></dt>
-				<dd>
-			<?php echo h($header['Header']['message']); ?>
-			&nbsp;
-		</dd>
+				
 				<dt><?php echo __d('admin', 'Image Name'); ?></dt>
 				<dd>
 			<?php echo h($header['Header']['image_name']); ?>
