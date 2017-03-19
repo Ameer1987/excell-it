@@ -7,7 +7,7 @@
 -->
 <section class="well1 ins2 mobile-center">
     <div class="container">
-        <h2>The best business services</h2>
+        <!--<h2>The best business services</h2>-->
         <div class="row">
             <?php foreach ($services as $key => $service): ?>
                 <?php if ($key > 0 && $key % 3 == 0): ?>
