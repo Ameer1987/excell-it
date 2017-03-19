@@ -8,10 +8,6 @@
         <meta name="format-detection" content="telephone=no">
 
         <?php
-        echo $this->Html->meta('favicon.ico', '/img/favicon.ico', array(
-            'type' => 'icon'
-        ));
-
         echo $this->Html->css('grid');
         echo $this->Html->css('style');
         echo $this->Html->css('camera');
@@ -38,9 +34,13 @@
             <header>
                 <div class="container">
                     <div class="brand">
-                        <h1 class="brand_name"><a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'homepage')); ?>"><img src="../img/logo.jpg" style="width: 180px;"  alt='Excell IT' title='Excell IT' /></a></h1>
-                    </div><a href="callto:#" class="fa-phone">800-2345-6789</a>
-                    <p>One of our representatives will happily contact you within 24 hours. For urgent needs call us at</p>
+                        <h1 class="brand_name">
+                            <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'homepage')); ?>">
+                                <img src="../files/files/<?php echo $Header['Header']['image_name'] ?>" style="width: 180px;"  alt='Excell IT' title='Excell IT' />
+                            </a>
+                        </h1>
+                    </div><a href="callto:#" class="fa-phone"><?php echo $Header['Header']['phone'] ?></a>
+                    <p><?php echo $Header['Header']['text'] ?></p>
                 </div>
                 <div id="stuck_container" class="stuck_container">
                     <div class="container">
