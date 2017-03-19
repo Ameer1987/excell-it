@@ -642,7 +642,7 @@ blockquote p + cite {
     line-height: 18px;
     color: #62bfe6;
 }
-.marked-list li a:before {
+.marked-list li a:before, .marked-list li:before{
     content: "\f00c";
     position: absolute;
     left: 0;
