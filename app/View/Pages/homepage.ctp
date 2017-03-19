@@ -6,9 +6,24 @@
             ========================================================
 -->
 
-<section class="camera_container">
-    <?php echo $this->element('homepage_slideshow'); ?>
-</section>
+<?php if (count($HomepageSliders) > 0): ?>
+    <section class="camera_container">
+        <div id="camera" class="camera_wrap">
+            <?php foreach ($HomepageSliders as $HomepageSlider): ?>
+                <div data-src="../files/files/<?php echo $HomepageSlider['HomepageSlider']['image_name'] ?>">
+                    <div class="camera_caption fadeIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="preffix_6 grid_6"><?php echo $HomepageSlider['HomepageSlider']['title'] ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </section>
+<?php endif; ?>
+
 <section>
     <div class="container banner_wr">
         <ul class="banner">
