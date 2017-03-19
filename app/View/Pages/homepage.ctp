@@ -80,14 +80,18 @@
             <div class="grid_4">
                 <?php if ($Bottom1Block['Bottom1Block']['text']): ?>
                     <h2><?php echo $Bottom1Block['Bottom1Block']['header'] ?></h2>
-                    <img src="../files/files/<?php echo $Bottom1Block['Bottom1Block']['image_name'] ?>" alt="">
+                    <?php if ($Bottom1Block['Bottom1Block']['image_name']): ?>
+                        <img src="../files/files/<?php echo $Bottom1Block['Bottom1Block']['image_name'] ?>" alt="">
+                    <?php endif; ?>
                     <p><?php echo $Bottom1Block['Bottom1Block']['text'] ?></p>
                 <?php endif; ?>
             </div>
             <div class="grid_4">
                 <?php if ($Bottom2Block['Bottom2Block']['text']): ?>
                     <h2><?php echo $Bottom2Block['Bottom2Block']['header'] ?></h2>
-                    <img src="../files/files/<?php echo $Bottom2Block['Bottom2Block']['image_name'] ?>" alt="">
+                    <?php if ($Bottom2Block['Bottom2Block']['image_name']): ?>
+                        <img src="../files/files/<?php echo $Bottom2Block['Bottom2Block']['image_name'] ?>" alt="">
+                    <?php endif; ?>
                     <p><?php echo $Bottom2Block['Bottom2Block']['text'] ?></p>
                 <?php endif; ?>
             </div>
@@ -95,7 +99,9 @@
                 <?php if ($Bottom3Block['Bottom3Block']['text']): ?>
                     <div class="info-box">
                         <h2><?php echo $Bottom3Block['Bottom3Block']['header'] ?></h2>
-                        <img src="../files/files/<?php echo $Bottom3Block['Bottom3Block']['image_name'] ?>" alt="">
+                        <?php if ($Bottom3Block['Bottom3Block']['image_name']): ?>
+                            <img src="../files/files/<?php echo $Bottom3Block['Bottom3Block']['image_name'] ?>" alt="">
+                        <?php endif; ?>
                         <p><?php echo $Bottom3Block['Bottom3Block']['text'] ?></p>
                     </div>
                 <?php endif; ?>
@@ -104,9 +110,11 @@
                         <?php foreach ($Bottom4Blocks as $key => $Bottom4Block): ?>
                             <div class="item">
                                 <blockquote class="box">
-                                    <div class="box_aside">
-                                        <img src="../files/files/<?php echo $Bottom4Block['Bottom4Block']['image_name'] ?>" alt="">
-                                    </div>
+                                    <?php if ($Bottom4Block['Bottom4Block']['image_name']): ?>
+                                        <div class="box_aside">
+                                            <img src="../files/files/<?php echo $Bottom4Block['Bottom4Block']['image_name'] ?>" alt="">
+                                        </div>
+                                    <?php endif; ?>
                                     <div class="box_cnt__no-flow">
                                         <p>
                                             <q><?php echo $Bottom4Block['Bottom4Block']['text'] ?></q>
