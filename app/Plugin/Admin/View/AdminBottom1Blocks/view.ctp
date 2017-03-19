@@ -38,7 +38,7 @@
                         <ul class="dropdown-menu pull-right">
                 				<li><?php echo $this->Html->link(__d('admin', 'Edit Bottom1 Block'), array('action' => 'edit', $bottom1Block['Bottom1Block']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
 				<li><?php echo $this->Form->postLink(__d('admin', 'Delete Bottom1 Block'), array('action' => 'delete', $bottom1Block['Bottom1Block']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $bottom1Block['Bottom1Block']['id'])); ?> </li>
-				<li><?php echo $this->Html->link(__d('admin', 'New Bottom1 Block'), array('action' => 'add')); ?> </li>
+				<li><?php // echo $this->Html->link(__d('admin', 'New Bottom1 Block'), array('action' => 'add')); ?> </li>
 				<li><?php echo $this->Html->link(__d('admin', 'List Bottom1 Blocks'), array('action' => 'index')); ?> </li>
                         </ul>
                     </div>
