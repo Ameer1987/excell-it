@@ -29,6 +29,7 @@ echo $this->Paginator->counter(array(
 ));
 ?></p>
 
+
 <div class="pagination">
     <ul>
 <?php
