@@ -78,21 +78,21 @@
     <div class="container">
         <div class="row">
             <div class="grid_4">
-                <?php if ($Bottom1Block): ?>
+                <?php if ($Bottom1Block['Bottom1Block']['text']): ?>
                     <h2><?php echo $Bottom1Block['Bottom1Block']['header'] ?></h2>
                     <img src="../files/files/<?php echo $Bottom1Block['Bottom1Block']['image_name'] ?>" alt="">
                     <p><?php echo $Bottom1Block['Bottom1Block']['text'] ?></p>
                 <?php endif; ?>
             </div>
             <div class="grid_4">
-                <?php if ($Bottom2Block): ?>
+                <?php if ($Bottom2Block['Bottom2Block']['text']): ?>
                     <h2><?php echo $Bottom2Block['Bottom2Block']['header'] ?></h2>
                     <img src="../files/files/<?php echo $Bottom2Block['Bottom2Block']['image_name'] ?>" alt="">
                     <p><?php echo $Bottom2Block['Bottom2Block']['text'] ?></p>
                 <?php endif; ?>
             </div>
             <div class="grid_4">
-                <?php if ($Bottom3Block): ?>
+                <?php if ($Bottom3Block['Bottom3Block']['text']): ?>
                     <div class="info-box">
                         <h2><?php echo $Bottom3Block['Bottom3Block']['header'] ?></h2>
                         <img src="../files/files/<?php echo $Bottom3Block['Bottom3Block']['image_name'] ?>" alt="">
