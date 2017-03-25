@@ -56,9 +56,9 @@ class PagesController extends AppController {
         $Bottom4Blocks = $this->Bottom4Block->find('all');
         $this->set('Bottom4Blocks', $Bottom4Blocks);
 
-        $this->loadModel('Contact');
-        $contacts = $this->Contact->find('first');
-        $this->set('contacts', $contacts);
+        $this->loadModel('ContactGeneral');
+        $ContactGeneral = $this->ContactGeneral->find('first');
+        $this->set('ContactGeneral', $ContactGeneral);
     }
 
     /**
@@ -79,12 +79,16 @@ class PagesController extends AppController {
     /**
      * 
      */
-    function contact() {
+    function contactBranches() {
         $this->layout = 'pages';
 
-        $this->loadModel('Contact');
-        $contacts = $this->Contact->find('first');
-        $this->set('contacts', $contacts);
+        $this->loadModel('ContactGeneral');
+        $ContactGeneral = $this->ContactGeneral->find('first');
+        $this->set('ContactGeneral', $ContactGeneral);
+
+        $this->loadModel('ContactBranch');
+        $ContactBranches = $this->ContactBranch->find('all');
+        $this->set('ContactBranches', $ContactBranches);
     }
 
     /**
