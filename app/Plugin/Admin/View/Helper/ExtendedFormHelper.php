@@ -1,17 +1,17 @@
 <?php
+
 App::uses('FormHelper', 'View/Helper');
 
-class ExtendedFormHelper extends FormHelper
-{
+class ExtendedFormHelper extends FormHelper {
 
     public $helpers = array('Html', 'Js');
 
     public function input($fieldName, $options = array()) {
         $options = $this->_bootstrapOptions($fieldName, $options);
         $magicOptions = $this->_magicOptions($options);
-        if($magicOptions['type'] == 'number') {
+        if ($magicOptions['type'] == 'number') {
             $value = $this->value($magicOptions);
-            if(empty($value['value'])) {
+            if (empty($value['value'])) {
                 $options['value'] = 0;
             }
         }
@@ -22,20 +22,25 @@ class ExtendedFormHelper extends FormHelper
         $options = $this->_initInputField($fieldName, $options);
         $modelKey = $this->model();
         $fieldKey = $this->field();
-        if(empty($options['value']))
-        {
-            if(!empty($this->request->query[$fieldKey])) $options['value'] = $this->request->query[$fieldKey];
+        if (empty($options['value'])) {
+            if (!empty($this->request->query[$fieldKey]))
+                $options['value'] = $this->request->query[$fieldKey];
         }
         return parent::text($fieldName, $options);
     }
 
     public function textarea($fieldName, $options = array()) {
         $options = $this->_initInputField($fieldName, $options);
-        if(!isset($options['rte']) || !empty($options['rte'])) {
+        if (!isset($options['rte']) || !empty($options['rte'])) {
             $urlPrefix = Router::url('/admin-plugin/js/');
             $ckoptions = array(
                 'toolbar' => array(
-                    array('Source', '-', 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink', '-', 'Image', '-', 'Table')
+                    array(
+                        'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat',
+                        '-', 'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock',
+                        'Format', 'Font', 'FontSize', 'TextColor', 'BGColor', 'Undo', 'Redo',
+                        'Find', 'Replace', '-', 'SelectAll', '-', 'SpellChecker', 'Scayt'
+                    )
                 ),
                 'extraAllowedContent' => array(
                     'article' => array(
@@ -62,8 +67,7 @@ class ExtendedFormHelper extends FormHelper
         if (empty($attributes['value'])) {
             $attributes = $this->value($attributes, $fieldName);
         }
-        if($attributes['value'] == '1970-01-01 01:00:00')
-        {
+        if ($attributes['value'] == '1970-01-01 01:00:00') {
             $attributes['value'] = '1970-00-00 00:00:00';
         }
         $result = parent::dateTime($fieldName, $dateFormat, $timeFormat, $attributes);
@@ -79,12 +83,12 @@ class ExtendedFormHelper extends FormHelper
     public function file($fieldName, $options = array()) {
         //remove file type param
         $fileType = 'file';
-        if(!empty($options['file_type'])) {
+        if (!empty($options['file_type'])) {
             $fileType = $options['file_type'];
             unset($options['file_type']);
         }
         $resourceType = 'Files';
-        switch($fileType) {
+        switch ($fileType) {
             case 'image':
                 $resourceType = 'Images';
                 break;
@@ -98,7 +102,7 @@ class ExtendedFormHelper extends FormHelper
         );
         $options['data-fileupload-config'] = json_encode($fileuploadConfig);
 
-        if(!isset($options['browse_server']) || !empty($options['browse_server'])) {
+        if (!isset($options['browse_server']) || !empty($options['browse_server'])) {
             $options['data-ckfinder'] = 1;
             $options['data-ckfinder-config'] = json_encode(array(
                 'httpRoot' => Router::url('/'),
@@ -112,34 +116,35 @@ class ExtendedFormHelper extends FormHelper
 
     private function _bootstrapOptions($fieldName, $options) {
         $initializedOptions = $this->_initInputField($fieldName, $options);
-        if(!empty($options['label']) && !is_array($options['label'])) {
+        if (!empty($options['label']) && !is_array($options['label'])) {
             $options['label'] = array('text' => $options['label']);
         }
-        if(isset($options['label']) && is_array($options['label'])) {
+        if (isset($options['label']) && is_array($options['label'])) {
             $options['label']['class'] = 'control-label';
         }
-        if(empty($options['div'])) {
+        if (empty($options['div'])) {
             $options['div'] = array();
         }
-        if(!isset($options['div']['class'])) {
+        if (!isset($options['div']['class'])) {
             $options['div']['class'] = 'control-group ' . Inflector::underscore($initializedOptions['id']);
         }
-        if(empty($options['error'])) {
+        if (empty($options['error'])) {
             $options['error'] = array('attributes' => array('wrap' => 'span', 'class' => 'help-inline'));
         }
-        if(empty($options['between'])) {
+        if (empty($options['between'])) {
             $options['between'] = '<div class="controls">';
         }
-        if(empty($options['after'])) {
+        if (empty($options['after'])) {
             $options['after'] = '</div>';
         }
-        if(isset($options['type']) && $options['type'] == 'checkbox') {
+        if (isset($options['type']) && $options['type'] == 'checkbox') {
             $options['div'] = array('class' => 'checkbox ' . Inflector::underscore($initializedOptions['id']));
             $options['label']['class'] = '';
-            $options['format'] = array('before', 'between', 'input', 'label' ,'error', 'after');
+            $options['format'] = array('before', 'between', 'input', 'label', 'error', 'after');
         } else {
-            $options['format'] = array('before', 'label', 'between', 'input' ,'error', 'after');
+            $options['format'] = array('before', 'label', 'between', 'input', 'error', 'after');
         }
         return $options;
     }
+
 }
