@@ -32,6 +32,7 @@
                     <ul class="nav navbar-nav">
                         <li><?php echo $this->Html->link('Users', '/' . $backendPluginNameUnderscored . '/users'); ?></li>
                         <li><?php echo $this->Html->link('Careers', '/' . $backendPluginNameUnderscored . '/careers'); ?></li>
+                        <li><?php echo $this->Html->link('Partners', '/' . $backendPluginNameUnderscored . '/partners'); ?></li>
                         <li><?php echo $this->Html->link('Contacts', '/' . $backendPluginNameUnderscored . '/contacts'); ?></li>
                         <li><?php echo $this->Html->link('Services', '/' . $backendPluginNameUnderscored . '/services'); ?></li>
                         <li><?php echo $this->Html->link('Service Snippets', '/' . $backendPluginNameUnderscored . '/service_snippets'); ?></li>
