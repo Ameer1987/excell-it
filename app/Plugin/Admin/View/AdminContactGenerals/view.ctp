@@ -76,9 +76,9 @@
                             <?php echo __d('admin', 'Actions');?>                            <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu pull-right">
-                				<li><?php echo $this->Html->link(__d('admin', 'Edit Contact General'), array('action' => 'edit', $contactGeneral['ContactGeneral']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
-				<li><?php echo $this->Form->postLink(__d('admin', 'Delete Contact General'), array('action' => 'delete', $contactGeneral['ContactGeneral']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $contactGeneral['ContactGeneral']['id'])); ?> </li>
-				<li><?php echo $this->Html->link(__d('admin', 'New Contact General'), array('action' => 'add')); ?> </li>
+                		<li><?php echo $this->Html->link(__d('admin', 'Edit Contact General'), array('action' => 'edit', $contactGeneral['ContactGeneral']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index'))))); ?> </li>
+				<!--<li><?php // echo $this->Form->postLink(__d('admin', 'Delete Contact General'), array('action' => 'delete', $contactGeneral['ContactGeneral']['id'], '?' => array('redirect' => $this->Html->url(array('action' => 'index')))), null, __d('admin', 'Are you sure you want to delete # %s?', $contactGeneral['ContactGeneral']['id'])); ?> </li>-->
+				<!--<li><?php // echo $this->Html->link(__d('admin', 'New Contact General'), array('action' => 'add')); ?> </li>-->
 				<li><?php echo $this->Html->link(__d('admin', 'List Contact Generals'), array('action' => 'index')); ?> </li>
                         </ul>
                     </div>
