@@ -90,6 +90,17 @@ class PagesController extends AppController {
     /**
      * 
      */
+    function partners() {
+        $this->layout = 'pages';
+
+        $this->loadModel('Partner');
+        $partners = $this->Partner->find('all');
+        $this->set('partners', $partners);
+    }
+
+    /**
+     * 
+     */
     function career() {
         $this->layout = 'pages';
 
