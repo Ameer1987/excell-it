@@ -7,6 +7,10 @@
         <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'services')); ?>">Services</a>
     </li>
 
+    <li class="<?php echo $this->action == "partners" ? "active" : ""; ?>">
+        <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'partners')); ?>">Our partners</a>
+    </li>
+
     <li class="<?php echo $this->action == "career" ? "active" : ""; ?>">
         <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'career')); ?>">Career</a>
     </li>
