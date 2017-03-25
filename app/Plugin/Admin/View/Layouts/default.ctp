@@ -33,7 +33,14 @@
                         <li><?php echo $this->Html->link('Users', '/' . $backendPluginNameUnderscored . '/users'); ?></li>
                         <li><?php echo $this->Html->link('Careers', '/' . $backendPluginNameUnderscored . '/careers'); ?></li>
                         <li><?php echo $this->Html->link('Partners', '/' . $backendPluginNameUnderscored . '/partners'); ?></li>
-                        <li><?php echo $this->Html->link('Contacts', '/' . $backendPluginNameUnderscored . '/contacts'); ?></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contacts
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><?php echo $this->Html->link('General', '/' . $backendPluginNameUnderscored . '/contact_generals'); ?></li>
+                                <li><?php echo $this->Html->link('Branches', '/' . $backendPluginNameUnderscored . '/contact_branches'); ?></li>
+                            </ul>
+                        </li>
                         <li><?php echo $this->Html->link('Services', '/' . $backendPluginNameUnderscored . '/services'); ?></li>
                         <li><?php echo $this->Html->link('Service Snippets', '/' . $backendPluginNameUnderscored . '/service_snippets'); ?></li>
                         <li class="dropdown">
