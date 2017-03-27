@@ -19,7 +19,7 @@
                     <?php endif ?>
                     <h3><?php echo $service['Service']['header'] ?></h3>
                     <p><?php echo $service['Service']['details'] ?></p>
-                    <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'displayService', $service['Service']['id'])); ?>" class="btn">Read more</a>
+                    <!--<a href="<?php // echo Router::url(array('controller' => 'Pages', 'action' => 'displayService', $service['Service']['id']));   ?>" class="btn">Read more</a>-->
                 </div>
             <?php endforeach ?>
         </div>
