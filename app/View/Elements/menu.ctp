@@ -11,9 +11,9 @@
         <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'partners')); ?>">Our partners</a>
     </li>
 
-    <li class="<?php echo $this->action == "career" ? "active" : ""; ?>">
+<!--    <li class="<?php echo $this->action == "career" ? "active" : ""; ?>">
         <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'career')); ?>">Career</a>
-    </li>
+    </li>-->
 
     <li class="<?php echo $this->action == "contactBranches" ? "active" : ""; ?>">
         <a href="<?php echo Router::url(array('controller' => 'Pages', 'action' => 'contactBranches')); ?>">Contact us</a>
