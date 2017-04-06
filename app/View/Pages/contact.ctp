@@ -1,4 +1,4 @@
-<?php $this->assign('title', 'Excel IT | Contact us'); ?>
+<?php $this->assign('title', 'Excell IT | Contact us'); ?>
 
 <!--
       ========================================================
@@ -31,8 +31,8 @@
         "showWindow" => true,
         "latitude" => $contacts['Contact']['position_latitude'],
         "longitude" => $contacts['Contact']['position_longitude'],
-        "windowText" => "Excel IT Company",
-        "markerTitle" => "Excel IT",
+        "windowText" => "Excell IT Company",
+        "markerTitle" => "Excell IT",
         "markerIcon" => "http://labs.google.com/ridefinder/images/mm_20_purple.png",
         "markerShadow" => "http://labs.google.com/ridefinder/images/mm_20_purpleshadow.png"
     ));
