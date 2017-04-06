@@ -1,4 +1,4 @@
-<?php $this->assign('title', 'Excel IT | Contact us'); ?>
+<?php $this->assign('title', 'Excell IT | Contact us'); ?>
 
 <!--
       ========================================================
@@ -30,8 +30,8 @@ echo $this->GoogleMap->addMarker("map_canvas", 1, array(
     "showWindow" => true,
     "latitude" => $ContactGeneral['ContactGeneral']['position_latitude'],
     "longitude" => $ContactGeneral['ContactGeneral']['position_longitude'],
-    "windowText" => "Excel IT Company",
-    "markerTitle" => "Excel IT",
+    "windowText" => "Excell IT Company",
+    "markerTitle" => "Excell IT",
     "markerIcon" => "http://labs.google.com/ridefinder/images/mm_20_purple.png",
     "markerShadow" => "http://labs.google.com/ridefinder/images/mm_20_purpleshadow.png"
 ));
