@@ -97,13 +97,13 @@
             </div>
             <div class="grid_4">
                 <?php if ($Bottom3Block['Bottom3Block']['text']): ?>
-                    <div class="info-box">
-                        <h2><?php echo $Bottom3Block['Bottom3Block']['header'] ?></h2>
-                        <?php if ($Bottom3Block['Bottom3Block']['image_name']): ?>
-                            <img src="../files/files/<?php echo $Bottom3Block['Bottom3Block']['image_name'] ?>" alt="">
-                        <?php endif; ?>
-                        <p><?php echo $Bottom3Block['Bottom3Block']['text'] ?></p>
-                    </div>
+                    <!--<div class="info-box">-->
+                    <h2><?php echo $Bottom3Block['Bottom3Block']['header'] ?></h2>
+                    <?php if ($Bottom3Block['Bottom3Block']['image_name']): ?>
+                        <img src="../files/files/<?php echo $Bottom3Block['Bottom3Block']['image_name'] ?>" alt="">
+                    <?php endif; ?>
+                    <p><?php echo $Bottom3Block['Bottom3Block']['text'] ?></p>
+                    <!--</div>-->
                 <?php endif; ?>
                 <?php if (count($Bottom4Blocks) > 1): ?>
                     <div class="owl-carousel">
