@@ -1,4 +1,4 @@
-<?php $this->assign('title', 'Excel IT | Homepage'); ?>
+<?php $this->assign('title', 'Excell IT | Homepage'); ?>
 
 <!--
             ========================================================
